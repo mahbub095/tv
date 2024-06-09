@@ -11,7 +11,7 @@
                 <div class="d-sm-none d-lg-inline-block">Hi, {{auth()->user()->name}}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="{{route('admin.profile')}}" class="dropdown-item has-icon">
+                <a href=" " class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
                 </a>
 

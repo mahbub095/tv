@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\ChannelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +31,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::resource('channel', ChannelController::class);
