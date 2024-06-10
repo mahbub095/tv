@@ -19,7 +19,7 @@
                 <div class="channel_collapse">
 
                     <div class="channel"
-                        onclick="play('https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8')">
+                        onclick="play('{{$channel->btn_url}}')">
                         <img alt="Stream" src="//i.imgur.com/ceD3hoF.jpg" />
                         <p>1</p>
                     </div>
