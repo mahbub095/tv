@@ -23,15 +23,15 @@ class ChannelDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($query) {
-                $editBtn = "<a href='" . route('#', $query->id) . "' class='btn btn-primary'><i class='far fa-edit'></i></a>";
-                $deleteBtn = "<a href='" . route('#', $query->id) . "' class='btn btn-danger ml-2 delete-item'><i class='far fa-trash-alt'></i></a>";
+                // $editBtn = "<a href='" . route('#', $query->id) . "' class='btn btn-primary'><i class='far fa-edit'></i></a>";
+                // $deleteBtn = "<a href='" . route('#', $query->id) . "' class='btn btn-danger ml-2 delete-item'><i class='far fa-trash-alt'></i></a>";
 
-                return $editBtn . $deleteBtn;
+                // return $editBtn . $deleteBtn;
             })
-            
-          
-         
-            ->rawColumns(['icon', 'action', 'status'])
+
+
+
+            ->rawColumns(['btn_url'])
             ->setRowId('id');
     }
 
@@ -71,15 +71,17 @@ class ChannelDataTable extends DataTable
     public function getColumns(): array
     {
         return [
+
+            Column::make('id'),
+            Column::make('btn_url'),
+            Column::make('created_at'),
+            Column::make('updated_at'),
+
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
                   ->width(60)
                   ->addClass('text-center'),
-            Column::make('id'),
-            Column::make('add your columns'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
         ];
     }
 
