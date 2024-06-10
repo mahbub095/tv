@@ -81,13 +81,13 @@
 
 
                         <li class="Bangla">
-                            @foreach ($channels as $channel)
+                            {{-- @foreach ($channels as $channel) --}}
                                 <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                    data-link="{{ 'channel->btn_url' }}"><img src="img/gtv.jpg" alt="" /></a>
+                                data-link="https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"><img src="img/gtv.jpg" alt="" /></a>
 
 
                         </li>
-                        @endforeach
+                        {{-- @endforeach --}}
                     </ul>
 
                 </div>
