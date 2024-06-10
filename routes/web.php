@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ChannelController;
-
+use App\Http\Controllers\FrontendController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +16,8 @@ use App\Http\Controllers\Backend\ChannelController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [FrontendController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
