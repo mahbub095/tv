@@ -45,13 +45,13 @@ class ChannelController extends Controller
         ]);
 
         // $logoPath = $this->uploadImage($request, 'logo', 'uploads');
-        $brand = new Channel();
+        $channel = new Channel();
 
         // $brand->logo = $logoPath;
-        $brand->name = $request->name;
-        $brand->slug = $request->slug;
-        $brand->status = $request->status;
-        $brand->save();
+        $channel->name = $request->name;
+        $channel->slug = $request->slug;
+        $channel->status = $request->status;
+        $channel->save();
 
         toastr('Created Successfully!', 'success');
         return redirect()->route('channel.index');
@@ -68,17 +68,37 @@ class ChannelController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Channel $channel)
+    public function edit(string $id)
     {
-        //
+        $channel = Channel::findOrFail($id);
+        return view('admin.channel.edit', compact('channel'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Channel $channel)
+    public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'max:200'],
+            'status' => ['required']
+        ]);
+
+
+        $channel = Channel::findOrFail($id);
+
+        // $logoPath = $this->updateImage($request, 'logo', 'uploads', $brand->logo);
+        // $brand->logo = empty(!$logoPath) ? $logoPath : $brand->logo;
+
+        $channel->name = $request->name;
+        $channel->slug = $request->slug;
+        $channel->status = $request->status;
+        $channel->save();
+
+
+
+        toastr('Updated Successfully!', 'success');
+        return redirect()->route('channel.index');
     }
 
     /**

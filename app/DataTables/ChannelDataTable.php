@@ -23,15 +23,17 @@ class ChannelDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($query) {
-                // $editBtn = "<a href='" . route('#', $query->id) . "' class='btn btn-primary'><i class='far fa-edit'></i></a>";
-                $deleteBtn = "<a href='".route('channel.destroy', $query->id) . "' class='btn btn-danger ml-2 delete-item'><i class='far fa-trash-alt'></i></a>";
+                $editBtn = "<a href='" . route('channel.edit', $query->id) . "' class='btn btn-primary'><i class='far fa-edit'></i></a>";
+                $deleteBtn = "<a href='" . route('channel.destroy', $query->id) . "' class='btn btn-danger ml-2 delete-item'><i class='far fa-trash-alt'></i></a>";
 
-                return  $deleteBtn;
+                return $editBtn . $deleteBtn;
+            })
+            ->addColumn('logo', function ($query) {
+                return "<img width='100px' src='" . asset($query->logo) . "' ></img>";
             })
 
 
-
-            ->rawColumns(['logo', 'status', 'action'])
+            ->rawColumns(['logo', 'action'])
             ->setRowId('id');
     }
 
@@ -53,7 +55,7 @@ class ChannelDataTable extends DataTable
             ->columns($this->getColumns())
             ->minifiedAjax()
             //->dom('Bfrtip')
-            ->orderBy(1)
+            ->orderBy(0)
             ->selectStyleSingle()
             ->buttons([
                 Button::make('excel'),
@@ -74,15 +76,12 @@ class ChannelDataTable extends DataTable
 
             Column::make('id'),
             Column::make('slug'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
-            Column::make('created_at'),
-            Column::make('status'),
+            Column::make('name')->width(300),
 
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
-                ->width(60)
+                ->width(200)
                 ->addClass('text-center'),
         ];
     }
