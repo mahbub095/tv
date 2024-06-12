@@ -76,6 +76,8 @@ class ChannelDataTable extends DataTable
             Column::make('slug'),
             Column::make('created_at'),
             Column::make('updated_at'),
+            Column::make('created_at'),
+            Column::make('status'),
 
             Column::computed('action')
                 ->exportable(false)
