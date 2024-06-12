@@ -29,4 +29,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+
 Route::resource('channel', ChannelController::class);

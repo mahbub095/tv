@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Traits\ImageUploadTrait;
+use Illuminate\Http\Request;
 
 return new class extends Migration
 {
@@ -13,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('channels', function (Blueprint $table) {
             $table->id();
-            $table->string('btn_url')->nullable();
+            $table->text('logo')->nullable();
+            $table->string('name');
+            $table->string('slug');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

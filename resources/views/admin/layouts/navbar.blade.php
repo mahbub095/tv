@@ -7,8 +7,8 @@
         <li class="dropdown"><a href="#" data-toggle="dropdown"
                                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                 <img alt="image" style="width: 40px;height: 40px;
-        object-fit: cover;" src="{{asset(auth()->user()->image)}}" class="rounded-circle mr-1">
-                <div class="d-sm-none d-lg-inline-block">Hi, {{auth()->user()->name}}</div>
+        object-fit: cover;" src="" class="rounded-circle mr-1">
+                <div class="d-sm-none d-lg-inline-block">Hi,  </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a href=" " class="dropdown-item has-icon">

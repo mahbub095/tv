@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <h4>All Categories</h4>
                             <div class="card-header-action">
-                                <a href=" " class="btn btn-primary"><i class="fas fa-plus"></i> Create New</a>
+                                <a href="{{route('channel.create')}} " class="btn btn-primary"><i class="fas fa-plus"></i> Create New</a>
                             </div>
                         </div>
                         <div class="card-body">

@@ -80,19 +80,33 @@
                     <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
 
                         @foreach ($channels as $channel)
+                        @if ($channel->status === 0)
                             <li class="Bangla">
+
+                                    <a id="myLink" title="Click" href="javascript:;" class="channel"
+                                        data-link="{{ $channel->slug }}"><img src="{{ asset('frontend/img/gtv.jpg') }}"
+                                            alt="" /></a>
+                            </li>
+                        @elseif ($channel->status == 1)
+                            <li class="English">
                                 <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                    data-link="{{ $channel->btn_url }}"><img src="{{ asset('frontend/img/gtv.jpg') }}"
-                                        alt="" /></a>
+                                    data-link="{{ $channel->slug }}"><img src=" {{ asset('frontend/img/gtv.jpg') }}" alt="" /></a>
+                            </li>
+                        @elseif ($channel->status == 2)
+                            <li class="Sports">
+                                <a id="myLink" title="Click" href="javascript:;" class="channel"
+                                    data-link="{{ $channel->slug }}"><img src=" {{ asset('frontend/img/gtv.jpg') }}" alt="" /></a>
 
                             </li>
+                            @elseif ($channel->status == 3)
+                            <li class="Hindi">
+                                <a id="myLink" title="Click" href="javascript:;" class="channel"
+                                    data-link="{{ $channel->slug }}"><img src=" {{ asset('frontend/img/gtv.jpg') }}" alt="" /></a>
+
+                            </li>
+                        @endif
                         @endforeach
 
-                        <li class="Sports">
-                            <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                data-link="https://cdn-1.bdiptv24.line.pm/live/SP/index.m3u8"><img
-                                    src="{{asset('frontend/img/gtv.jpg')}}" alt="" /></a>
-                        </li>
                     </ul>
                 </div>
             </div>

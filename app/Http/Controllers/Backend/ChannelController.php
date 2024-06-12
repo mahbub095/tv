@@ -6,6 +6,8 @@ use App\DataTables\ChannelDataTable;
 use App\Models\Channel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Traits\ImageUploadTrait;
+use Str;
 
 class ChannelController extends Controller
 {
@@ -14,7 +16,7 @@ class ChannelController extends Controller
      */
     public function index(ChannelDataTable $dataTable)
     {
-         return $dataTable->render('admin.channel.index');
+        return $dataTable->render('admin.channel.index');
     }
 
     /**
@@ -22,7 +24,7 @@ class ChannelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.channel.create');
     }
 
     /**
@@ -30,7 +32,23 @@ class ChannelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name' => ['required', 'max:200'],
+            'status' => ['required']
+        ]);
+
+        // $logoPath = $this->uploadImage($request, 'logo', 'uploads');
+        $brand = new Channel();
+
+        // $brand->logo = $logoPath;
+        $brand->name = $request->name;
+        $brand->slug = $request->slug;
+        $brand->status = $request->status;
+        $brand->save();
+
+        toastr('Created Successfully!', 'success');
+        return redirect()->route('channel.index');
     }
 
     /**
