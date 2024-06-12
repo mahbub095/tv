@@ -78,8 +78,12 @@ class ChannelController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Channel $channel)
+    public function destroy(string $id)
     {
-        //
+
+        $brand = Channel::findOrFail($id);
+        $brand->delete();
+
+        return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
     }
 }
