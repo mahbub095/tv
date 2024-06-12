@@ -14,6 +14,12 @@ class ChannelController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index(ChannelDataTable $dataTable)
     {
         return $dataTable->render('admin.channel.index');
