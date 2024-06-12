@@ -44,10 +44,10 @@
                                 <div class="form-group">
                                     <label for="inputState">Status</label>
                                     <select id="inputState" class="form-control" name="status">
-                                        <option {{ $channel->status == 0 ? 'selected' : '' }} value="1">Bangla</option>
-                                        <option {{ $channel->status == 1 ? 'selected' : '' }} value="0">English
-                                        <option {{ $channel->status == 2 ? 'selected' : '' }} value="0">Sports
-                                        <option {{ $channel->status == 3 ? 'selected' : '' }} value="0">Hindi
+                                        <option {{ $channel->status == 0 ? 'selected' : '' }} value="0">Bangla</option>
+                                        <option {{ $channel->status == 1 ? 'selected' : '' }} value="1">English
+                                        <option {{ $channel->status == 2 ? 'selected' : '' }} value="2">Sports
+                                        <option {{ $channel->status == 3 ? 'selected' : '' }} value="3">Hindi
                                         </option>
                                     </select>
                                 </div>
