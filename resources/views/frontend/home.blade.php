@@ -1,106 +1,107 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>TVBD Sports</title>
-    <link href='favicon.ico' rel='icon' type='image/x-icon' />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="{{ asset('frontend/playerjs.css') }}">
-    <script src="{{ asset('frontend/playerjs.js') }}" type="text/javascript"></script>
+    <meta charset="utf-8" />
+    <title>Eleven Plus Stream</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet" />
+    <link href="{{ asset('frontend2/css/style.css') }}" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="{{ asset('frontend2/js/clappr.min.js') }}"></script>
+    <link href="{{ asset('frontend2/css/custom.css') }}" rel="stylesheet" />
+    <script type="text/javascript" src="{{ asset('frontend2/js/clappr-chromecast-plugin.min.js') }}"></script>
+    <style class="clappr-style">
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 400;
+            src: local("Roboto"), local("Roboto-Regular"),
+                url(https://cdn.jsdelivr.net/npm/clappr@latest/dist/38861cba61c66739c1452c3a71e39852.ttf) format("truetype");
+        }
+
+        body {
+            background: #000 url(img/bgu.jpg) top center;
+        }
+    </style>
 </head>
 
 <body>
-    <!--nav><center><img src="" height="50px" width="256px"></center></nav-->
-    <main>
-        <div id="channels">
-            <h2 class="category">Global</h2>
-
-            @foreach ($channels as $channel)
-                <div class="channel_collapse">
-
-                    <div class="channel"
-                        onclick="play('{{$channel->btn_url}}')">
-                        <img alt="Stream" src="//i.imgur.com/ceD3hoF.jpg" />
-                        <p>1</p>
+    <div class="container-fluid">
+        <div class="row justify-content-center" style="margin-top: 50px">
+            <div class="col-12 col-lg-8">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <div id="player" class="embed-responsive-item">
+                        <video id="vid1" class="video-js vjs-default-skin vjs-fluid"
+                            poster="http://i.imgur.com/xxqm7EE.png" width="640" height="360" controls autoplay
+                            preload="none"
+                            data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL", "src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
                     </div>
                 </div>
-            @endforeach
-
-            <h2 class="category">11plus.live</h2>
-            <div class="channel_collapse">
-                <div class="channel" onclick="play('http://tv.11plus.live/live/tsports/index.m3u8')"> <img
-                        alt="Tsports" src="img/tp.jpg" />
-                    <p>Tsports</p>
-                </div>
-                <div class="channel" onclick="play('http://tv.11plus.live/live/stersports1hd/index.m3u8')"> <img
-                        alt="Star Sports 1" src="img/sp1.jpg" />
-                    <p>Star Sports 1</p>
-                </div>
-                <div class="channel" onclick="play('http://tv.11plus.live/live/starsports2/index.m3u8')"> <img
-                        alt="Star Sports 2" src="img/sp1.jpg" />
-                    <p>Star Sports 2</p>
-                </div>
             </div>
 
-            <h2 class="category">172.17.50.112</h2>
-            <div class="channel_collapse">
-                <div class="channel" onclick="play('http://172.17.50.112/live/antbd1001/index.m3u8')"> <img
-                        alt="Star Sports 1" src="img/sp1.jpg" />
-                    <p>Star Sports 1</p>
-                </div>
-                <div class="channel" onclick="play('http://172.17.50.112/live/fifa2022/index.m3u8')"> <img
-                        alt="Star Sports 2" src="img/sp2.jpg" />
-                    <p>Star Sports 2</p>
-                </div>
-                <div class="channel" onclick="play('http://172.17.50.112/live/antbd1002/index.m3u8')"> <img
-                        alt="Tsports" src="img/tp.jpg" />
-                    <p>Tsports</p>
+            <div class="col-12 col-lg-4">
+                <div class="channel-list">
+                    <ul class="nav nav-tabs nav-justified" style="margin-bottom: 15px">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-type="Bangla">Bangla</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-type="English">English</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-type="Hindi">Hindi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-type="Sports">Sports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-type="Cartoon">Cartoon</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-type="Others">Others</a>
+                        </li>
+                    </ul>
+                    <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
+
+                        @foreach ($channels as $channel)
+                            <li class="Bangla">
+                                <a id="myLink" title="Click" href="javascript:;" class="channel"
+                                    data-link="{{ $channel->btn_url }}"><img src="{{ asset('frontend/img/gtv.jpg') }}"
+                                        alt="" /></a>
+
+                            </li>
+                        @endforeach
+
+                        <li class="Sports">
+                            <a id="myLink" title="Click" href="javascript:;" class="channel"
+                                data-link="https://cdn-1.bdiptv24.line.pm/live/SP/index.m3u8"><img
+                                    src="{{asset('frontend/img/gtv.jpg')}}" alt="" /></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
         </div>
-        <div id="player"></div>
-    </main>
-    <script>
-        var player = new Playerjs({
-            id: "player",
-            file: "http://172.17.50.112/live/antbd1002/index.m3u8",
-            poster: "//raw.githubusercontent.com/tvbd/tvbd.github.io/master/img/icc.webp"
-        });
-    </script>
-    <script>
-        var coll = document.getElementsByClassName("category");
-        var i;
+    </div>
 
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        }
-
-        function play(file) {
-            try {
-                player.api('file', file);
-                player.api('play');
-                if (screen.width < 641) {
-                    window.scroll({
-                        top: 0,
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            } catch (err) {
-                alert(err);
-            }
-        }
-    </script>
-
+    <script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
+    <script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
+    <script src="{{ asset('frontend2/js/scripts.js') }}"></script>
 </body>
 
 </html>

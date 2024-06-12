@@ -9,7 +9,7 @@ class FrontendController extends Controller
     public function index()
     {
         $channels = Channel::all();
-        return view('frontend.home2', compact('channels'));
+        return view('frontend.home', compact('channels'));
     }
 
 }
