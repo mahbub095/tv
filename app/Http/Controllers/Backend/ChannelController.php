@@ -89,8 +89,8 @@ class ChannelController extends Controller
 
         $channel = Channel::findOrFail($id);
 
-        // $logoPath = $this->updateImage($request, 'logo', 'uploads', $brand->logo);
-        // $brand->logo = empty(!$logoPath) ? $logoPath : $brand->logo;
+        $logoPath = $this->updateImage($request, 'logo', 'uploads', $channel->logo);
+        $channel->logo = empty(!$logoPath) ? $logoPath : $channel->logo;
 
         $channel->name = $request->name;
         $channel->slug = $request->slug;

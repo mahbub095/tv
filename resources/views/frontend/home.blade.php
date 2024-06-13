@@ -95,7 +95,7 @@
                         @elseif ($channel->status == 2)
                             <li class="Sports">
                                 <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                    data-link="{{ $channel->slug }}"><img src=" {{ asset('frontend/img/gtv.jpg') }}" alt="" /></a>
+                                    data-link="{{ $channel->slug }}"><img src=" {{ asset($channel->logo) }}" alt="" /></a>
 
                             </li>
                             @elseif ($channel->status == 3)

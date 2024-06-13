@@ -4,7 +4,7 @@
     <!-- Main Content -->
     <section class="section">
         <div class="section-header">
-            <h1>Brand</h1>
+            <h1>Channel</h1>
 
         </div>
 
@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Create Brand</h4>
+                            <h4>Create Channel</h4>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('channel.store') }}" method="POST" enctype="multipart/form-data">

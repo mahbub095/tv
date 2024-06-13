@@ -15,9 +15,9 @@
             <li class="menu-header">TV APP</li>
             <li class="dropdown ">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-list"></i>
-                    <span>Manage Categories</span></a>
+                    <span>Manage Channels</span></a>
                 <ul class="dropdown-menu">
-                    <li class=" "><a class="nav-link" href="{{ route('channel.index') }}">Category</a></li>
+                    <li class=" "><a class="nav-link" href="{{ route('channel.index') }}">All Channels</a></li>
                 </ul>
             </li>
 
