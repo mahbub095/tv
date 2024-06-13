@@ -5,26 +5,29 @@
     <ul class="navbar-nav navbar-right">
 
         <li class="dropdown"><a href="#" data-toggle="dropdown"
-                                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                 <img alt="image" style="width: 40px;height: 40px;
-        object-fit: cover;" src="" class="rounded-circle mr-1">
-                <div class="d-sm-none d-lg-inline-block">Hi,  </div>
+        object-fit: cover;"
+                    src="{{ asset(auth()->user()->image) }}" class="rounded-circle mr-1">
+                <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href=" " class="dropdown-item has-icon">
+                <a href="{{ route('profile') }}" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
                 </a>
-
-                <a href=" " class="dropdown-item has-icon">
+{{--
+                <a href="{{ route('admin.settings.index') }}" class="dropdown-item has-icon">
                     <i class="fas fa-cog"></i> Settings
-                </a>
+                </a> --}}
                 <div class="dropdown-divider"></div>
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <a href="{{route('logout')}}" onclick="event.preventDefault();
-                this.closest('form').submit();" class="dropdown-item has-icon text-danger">
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                this.closest('form').submit();"
+                        class="dropdown-item has-icon text-danger">
                         <i class="fas fa-sign-out-alt"></i> Logout
                     </a>
                 </form>

@@ -9,7 +9,7 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="dropdown active">
-                <a href=" " class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="{{ route('dashbaord') }} " class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
 
             </li>
             <li class="menu-header">TV APP</li>
