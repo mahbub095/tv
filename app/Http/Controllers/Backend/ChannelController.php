@@ -15,6 +15,8 @@ class ChannelController extends Controller
      * Display a listing of the resource.
      */
 
+    use ImageUploadTrait;
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -44,10 +46,10 @@ class ChannelController extends Controller
             'status' => ['required']
         ]);
 
-        // $logoPath = $this->uploadImage($request, 'logo', 'uploads');
+        $logoPath = $this->uploadImage($request, 'logo', 'uploads');
         $channel = new Channel();
 
-        // $brand->logo = $logoPath;
+        $channel->logo = $logoPath;
         $channel->name = $request->name;
         $channel->slug = $request->slug;
         $channel->status = $request->status;
