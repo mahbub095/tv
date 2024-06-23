@@ -16,16 +16,16 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet" />
-    <link href="{{ asset('frontend2/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet" />
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="{{ asset('frontend2/js/clappr.min.js') }}"></script>
-    <link href="{{ asset('frontend2/css/custom.css') }}" rel="stylesheet" />
-    <script type="text/javascript" src="{{ asset('frontend2/js/clappr-chromecast-plugin.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('frontend/js/clappr.min.js') }}"></script>
+    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet" />
+    <script type="text/javascript" src="{{ asset('frontend/js/clappr-chromecast-plugin.min.js') }}"></script>
     <style class="clappr-style">
         @font-face {
             font-family: Roboto;
@@ -47,10 +47,7 @@
             <div class="col-12 col-lg-8">
                 <div class="embed-responsive embed-responsive-16by9">
                     <div id="player" class="embed-responsive-item">
-                        <video id="vid1" class="video-js vjs-default-skin vjs-fluid"
-                            poster="http://i.imgur.com/xxqm7EE.png" width="640" height="360" controls autoplay
-                            preload="none"
-                            data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL", "src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
+                        <video id="vid1" class="video-js vjs-default-skin vjs-fluid" poster="http://i.imgur.com/xxqm7EE.png" width="640" height="320" controls autoplay preload="none" data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
                     </div>
                 </div>
             </div>
@@ -81,29 +78,24 @@
 
                         @foreach ($channels as $channel)
                         @if ($channel->status === 0)
-                            <li class="Bangla">
+                        <li class="Bangla">
 
-                                    <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                        data-link="{{ $channel->slug }}"><img src="{{ asset('frontend/img/gtv.jpg') }}"
-                                            alt="" /></a>
-                            </li>
+                            <a id="myLink" title="Click" href="javascript:;" class="channel" data-link="{{ $channel->slug }}"><img src="{{ asset($channel->logo) }}" alt="" /></a>
+                        </li>
                         @elseif ($channel->status == 1)
-                            <li class="English">
-                                <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                    data-link="{{ $channel->slug }}"><img src=" {{ asset('frontend/img/gtv.jpg') }}" alt="" /></a>
-                            </li>
+                        <li class="English">
+                            <a id="myLink" title="Click" href="javascript:;" class="channel" data-link="{{ $channel->slug }}"><img src="{{ asset($channel->logo) }}" alt="" /></a>
+                        </li>
                         @elseif ($channel->status == 2)
-                            <li class="Sports">
-                                <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                    data-link="{{ $channel->slug }}"><img src=" {{ asset($channel->logo) }}" alt="" /></a>
+                        <li class="Sports">
+                            <a id="myLink" title="Click" href="javascript:;" class="channel" data-link="{{ $channel->slug }}"><img src="{{ asset($channel->logo) }}" alt="" /></a>
 
-                            </li>
-                            @elseif ($channel->status == 3)
-                            <li class="Hindi">
-                                <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                    data-link="{{ $channel->slug }}"><img src=" {{ asset('frontend/img/gtv.jpg') }}" alt="" /></a>
+                        </li>
+                        @elseif ($channel->status == 3)
+                        <li class="Hindi">
+                            <a id="myLink" title="Click" href="javascript:;" class="channel" data-link="{{ $channel->slug }}"><img src=" {{ asset('frontend/img/gtv.jpg') }}" alt="" /></a>
 
-                            </li>
+                        </li>
                         @endif
                         @endforeach
 
@@ -115,7 +107,8 @@
 
     <script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
     <script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
-    <script src="{{ asset('frontend2/js/scripts.js') }}"></script>
+    <script src="{{ asset('frontend/js/scripts.js') }}"></script>
+    <script src="{{asset('frontend/js/Youtube.min.js')}}"></script>
 </body>
 
 </html>
