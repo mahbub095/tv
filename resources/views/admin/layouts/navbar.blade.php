@@ -5,10 +5,10 @@
     <ul class="navbar-nav navbar-right">
 
         <li class="dropdown"><a href="#" data-toggle="dropdown"
-                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                 <img alt="image" style="width: 40px;height: 40px;
         object-fit: cover;"
-                    src="{{ asset(auth()->user()->image) }}" class="rounded-circle mr-1">
+                     src="{{ asset(auth()->user()->image) }}" class="rounded-circle mr-1">
                 <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -22,9 +22,9 @@
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+                       onclick="event.preventDefault();
                 this.closest('form').submit();"
-                        class="dropdown-item has-icon text-danger">
+                       class="dropdown-item has-icon text-danger">
                         <i class="fas fa-sign-out-alt"></i> Logout
                     </a>
                 </form>

@@ -16,7 +16,7 @@
                 <div class="col-12 col-md-12 col-lg-7">
                     <div class="card">
                         <form method="post" class="needs-validation" novalidate=""
-                            action="{{ route('profile.update') }}" enctype="multipart/form-data">
+                              action="{{ route('profile.update') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="card-header">
                                 <h4>Update Profile</h4>
@@ -34,14 +34,14 @@
                                     <div class="form-group col-md-6 col-12">
                                         <label>Name</label>
                                         <input type="text" name="name" class="form-control"
-                                            value="{{ Auth::user()->name }}">
+                                               value="{{ Auth::user()->name }}">
 
                                     </div>
 
                                     <div class="form-group col-md-6 col-12">
                                         <label>Email</label>
                                         <input type="text" name="email" class="form-control"
-                                            value="{{ Auth::user()->email }}">
+                                               value="{{ Auth::user()->email }}">
 
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
                     <div class="card">
 
                         <form method="post" class="needs-validation" novalidate=""
-                            action="{{ route('password.update') }}" enctype="multipart/form-data">
+                              action="{{ route('password.update') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="card-header">
                                 <h4>Update Password</h4>

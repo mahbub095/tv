@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ChannelController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Backend\ProfileController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +28,7 @@ Route::get('/', [FrontendController::class, 'index'])->name('home');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 

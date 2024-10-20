@@ -98,7 +98,6 @@ class ChannelController extends Controller
         $channel->save();
 
 
-
         toastr('Updated Successfully!', 'success');
         return redirect()->route('channel.index');
     }

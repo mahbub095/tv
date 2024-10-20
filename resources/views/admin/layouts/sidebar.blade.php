@@ -9,7 +9,8 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="dropdown active">
-                <a href="{{ route('dashbaord') }} " class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="{{ route('dashbaord') }} " class="nav-link"><i
+                        class="fas fa-fire"></i><span>Dashboard</span></a>
 
             </li>
             <li class="menu-header">TV APP</li>
@@ -20,8 +21,6 @@
                     <li class=" "><a class="nav-link" href="{{ route('channel.index') }}">All Channels</a></li>
                 </ul>
             </li>
-
-
 
         </ul>
 

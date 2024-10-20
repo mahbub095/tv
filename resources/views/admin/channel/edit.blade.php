@@ -18,7 +18,7 @@
                         </div>
                         <div class="card-body">
                             <form action="{{ route('channel.update', $channel->id) }}" method="POST"
-                                enctype="multipart/form-data">
+                                  enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
