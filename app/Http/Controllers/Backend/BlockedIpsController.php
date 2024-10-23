@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Log;
 use App\Models\BlockedIps;
+use Illuminate\Http\Request;
+use function view;
 
 class BlockedIpsController extends Controller
 {

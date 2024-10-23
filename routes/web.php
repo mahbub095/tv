@@ -1,12 +1,13 @@
 <?php
 
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\BlockedIpsController;
 use App\Http\Controllers\Backend\ChannelController;
-use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Backend\ProfileController;
-use App\Http\Controllers\BlockedIpsController;
+use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\FrontendController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +48,6 @@ Route::get('blocked_ips', [BlockedIpsController::class,'getAll'])->name('dashboa
 //Route::get('blocked_ips', 'BlockedIpsController@create')->name('dashboard.create_blocked_ip');;
 //Route::post('blocked_ips', 'BlockedIpsController@store')->name('dashboard.store_blocked_ip');;
 //Route::delete('blocked_ips/{id}', 'BlockedIpsController@delete')->name('dashboard.delete_blocked_ip');;
+
+
+Route::resource('user', UserController::class);
