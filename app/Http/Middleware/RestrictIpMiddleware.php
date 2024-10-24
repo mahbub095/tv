@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Middleware;
-use App\Models\BlockedIps;
-
 use Closure;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+ 
 
-class RestrictIpMiddleware
+class RestrictIpMiddleware  
 {
 
     // Blocked IP addresses
@@ -13,7 +14,7 @@ class RestrictIpMiddleware
 
     public function restrictedIp()
     {
-        $this->restrictedIp =BlockedIps::get();
+        $this->restrictedIp = \App\Models\BlockedIps::get();
     }
 
     /**
@@ -23,7 +24,7 @@ class RestrictIpMiddleware
      * @param \Closure $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next): Response
     {
         $this->restrictedIp();
         if (in_array($request->ip(), $this->restrictedIp->pluck('ip')->toArray())) {

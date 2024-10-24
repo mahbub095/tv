@@ -10,13 +10,19 @@ use function view;
 
 class BlockedIpsController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function getAll(Request $request){
         try{
-            $blocked_ips = BlockedIps::get();
+            $blocked_ips =\App\Models\BlockedIps::get();
         }catch(\Exception $e){
             Log::error('Error when fetching blocked ips' . $e->getMessage());
         }
-        return view('blocked_ips', $blocked_ips);
+        return view('blocked_ips', compact('blocked_ips'));
     }
 /*
     public function create(Request $request){
