@@ -23,31 +23,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
-
 require __DIR__ . '/auth.php';
 
-Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-
-Route::resource('channel', ChannelController::class);
 
 /** Profile Routes */
 Route::get('profile', [ProfileController::class, 'index'])->name('profile');
 Route::post('profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
 Route::post('profile/update/password', [ProfileController::class, 'updatePassword'])->name('password.update');
 
-
-Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashbaord');
-
-// Route::get('blocked_ips', [BlockedIpsController::class,'getAll'])->name('dashboard.blocked_ips');
-//Route::get('blocked_ips', 'BlockedIpsController@create')->name('dashboard.create_blocked_ip');;
-//Route::post('blocked_ips', 'BlockedIpsController@store')->name('dashboard.store_blocked_ip');;
-//Route::delete('blocked_ips/{id}', 'BlockedIpsController@delete')->name('dashboard.delete_blocked_ip');;
+Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::resource('channel', ChannelController::class);
 Route::resource('blockip', BlockIpController::class);
-
 Route::resource('user', UserController::class);

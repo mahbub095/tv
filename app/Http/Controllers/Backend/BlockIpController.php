@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers\Backend;
+
 use App\DataTables\BlockIPDataTable;
 use App\Models\BlockedIps;
 use App\Http\Controllers\Controller;
