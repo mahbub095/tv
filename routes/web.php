@@ -2,7 +2,7 @@
 
 
 use App\Http\Controllers\Backend\AdminController;
-use App\Http\Controllers\Backend\BlockedIpsController;
+use App\Http\Controllers\Backend\BlockIpController;
 use App\Http\Controllers\Backend\ChannelController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\UserController;
@@ -44,10 +44,10 @@ Route::post('profile/update/password', [ProfileController::class, 'updatePasswor
 
 Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashbaord');
 
-Route::get('blocked_ips', [BlockedIpsController::class,'getAll'])->name('dashboard.blocked_ips');
+// Route::get('blocked_ips', [BlockedIpsController::class,'getAll'])->name('dashboard.blocked_ips');
 //Route::get('blocked_ips', 'BlockedIpsController@create')->name('dashboard.create_blocked_ip');;
 //Route::post('blocked_ips', 'BlockedIpsController@store')->name('dashboard.store_blocked_ip');;
 //Route::delete('blocked_ips/{id}', 'BlockedIpsController@delete')->name('dashboard.delete_blocked_ip');;
-
+Route::resource('blockip', BlockIpController::class);
 
 Route::resource('user', UserController::class);

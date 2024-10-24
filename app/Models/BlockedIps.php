@@ -8,8 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class BlockedIps extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'ip'
-    ];
 }
