@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63efdeb8-50dd-4f39-8d72-a98519fac899" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/401.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/blockIP/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/blockIP/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/DataTables/BlockIPDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/BlockIPDataTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/BlockIpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/BlockIpController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RestrictIpMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RestrictIpMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blockIP/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blockIP/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/sidebar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,12 +186,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/blockIP" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\tv\resources\views\admin\blockIP" />
       <recent name="C:\laragon\www\tv\resources\views\admin\user" />
     </key>
   </component>
@@ -221,6 +228,7 @@
       <workItem from="1729519137567" duration="3960000" />
       <workItem from="1729611390547" duration="4558000" />
       <workItem from="1729696868093" duration="3523000" />
+      <workItem from="1729952158414" duration="4736000" />
     </task>
     <servers />
   </component>

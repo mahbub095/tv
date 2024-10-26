@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\DataTables\BlockIPDataTable;
 use App\Models\BlockedIps;
 use App\Http\Controllers\Controller;
+use App\Models\Channel;
 use Illuminate\Http\Request;
 use App\Traits\ImageUploadTrait;
 use Str;
@@ -31,7 +32,7 @@ class BlockIpController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.blockip.create');
     }
 
     /**
@@ -39,7 +40,16 @@ class BlockIpController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'ip' => ['required', 'max:200'],
+        ]);
+
+        $blockip = new BlockedIps();
+        $blockip->ip = $request->ip;
+        $blockip->save();
+
+        toastr('Created Successfully!', 'success');
+        return redirect()->route('blockip.index');
     }
 
     /**
@@ -55,7 +65,8 @@ class BlockIpController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $blockip = BlockedIps::findOrFail($id);
+        return view('admin.blockip.edit', compact('blockip'));
     }
 
     /**
@@ -63,7 +74,16 @@ class BlockIpController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'ip' => ['required', 'max:200'],
+        ]);
+
+        $blockip = BlockedIps::findOrFail($id);
+        $blockip->ip = $request->ip;
+        $blockip->save();
+
+        toastr('Updated Successfully!', 'success');
+        return redirect()->route('blockip.index');
     }
 
     /**
@@ -71,6 +91,9 @@ class BlockIpController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $blockip = BlockedIps::findOrFail($id);
+        $blockip->delete();
+
+        return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
     }
 }
