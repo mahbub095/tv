@@ -15,7 +15,9 @@
                 <a href="{{ route('profile') }}" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
                 </a>
-
+                <a href="{{route('admin.settings.index')}}" class="dropdown-item has-icon">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
                 <div class="dropdown-divider"></div>
 
                 <!-- Authentication -->

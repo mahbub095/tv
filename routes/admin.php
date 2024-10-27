@@ -4,6 +4,7 @@
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\BlockIpController;
 use App\Http\Controllers\Backend\ChannelController;
+use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,7 @@ Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard'
 Route::resource('channel', ChannelController::class);
 Route::resource('blockip', BlockIpController::class);
 Route::resource('user', UserController::class);
+
+/** settings routes */
+Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
+Route::put('logo-setting-update', [SettingController::class, 'logoSettingUpdate'])->name('logo-setting-update');
