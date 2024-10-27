@@ -17,7 +17,7 @@
                             <h4>Update Channel</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('channel.update', $channel->id) }}" method="POST"
+                            <form action="{{ route('admin.channel.update', $channel->id) }}" method="POST"
                                   enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')

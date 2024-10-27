@@ -37,11 +37,15 @@ class AuthenticatedSessionController extends Controller
             'last_login_ip' => $request->getClientIp()
         ]);
 
+        if($request->user()->role === 'admin'){
+            return redirect()->intended('/admin/dashboard');
+        }elseif($request->user()->role === 'vendor'){
+            return redirect()->intended('/vendor/dashboard');
+        }
+
+
         return redirect()->intended(RouteServiceProvider::HOME);
 
-        if($request->user()->role === 'admin'){
-            return redirect()->intended('/dashboard');
-        }
     }
 
     /**

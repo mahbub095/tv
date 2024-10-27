@@ -56,7 +56,7 @@ class ChannelController extends Controller
         $channel->save();
 
         toastr('Created Successfully!', 'success');
-        return redirect()->route('channel.index');
+        return redirect()->route('admin.channel.index');
     }
 
     /**
@@ -99,7 +99,7 @@ class ChannelController extends Controller
 
 
         toastr('Updated Successfully!', 'success');
-        return redirect()->route('channel.index');
+        return redirect()->route('admin.channel.index');
     }
 
     /**

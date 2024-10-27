@@ -17,7 +17,7 @@
                             <h4>Block Channel</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('blockip.update', $blockip->id) }}" method="POST"
+                            <form action="{{ route('admin.blockip.update', $blockip->id) }}" method="POST"
                                   enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')

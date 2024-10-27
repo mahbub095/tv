@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <h4>All Block List</h4>
                             <div class="card-header-action">
-                                <a href="{{route('blockip.create')}} " class="btn btn-primary"><i
+                                <a href="{{route('admin.blockip.create')}} " class="btn btn-primary"><i
                                         class="fas fa-plus"></i></a>
                             </div>
                         </div>

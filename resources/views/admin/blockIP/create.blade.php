@@ -17,7 +17,7 @@
                             <h4>Create block user</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('blockip.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.blockip.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
 

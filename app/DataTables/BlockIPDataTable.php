@@ -23,16 +23,14 @@ class BlockIPDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($query) {
-                $editBtn = "<a href='" . route('blockip.edit', $query->id) . "' class='btn btn-primary'><i class='far fa-edit'></i></a>";
-                $deleteBtn = "<a href='" . route('blockip.destroy', $query->id) . "' class='btn btn-danger ml-2 delete-item'><i class='far fa-trash-alt'></i></a>";
+                $editBtn = "<a href='" . route('admin.blockip.edit', $query->id) . "' class='btn btn-primary'><i class='far fa-edit'></i></a>";
+                $deleteBtn = "<a href='" . route('admin.blockip.destroy', $query->id) . "' class='btn btn-danger ml-2 delete-item'><i class='far fa-trash-alt'></i></a>";
 
                 return $editBtn . $deleteBtn;
             })
             ->addColumn('logo', function ($query) {
                 return "<img width='100px' src='" . asset($query->logo) . "' ></img>";
             })
-
-
             ->rawColumns(['logo', 'action'])
             ->setRowId('id');
     }
@@ -51,20 +49,20 @@ class BlockIPDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('blockip-table')
-                    ->columns($this->getColumns())
-                    ->minifiedAjax()
-                    //->dom('Bfrtip')
-                    ->orderBy(1)
-                    ->selectStyleSingle()
-                    ->buttons([
-                        Button::make('excel'),
-                        Button::make('csv'),
-                        Button::make('pdf'),
-                        Button::make('print'),
-                        Button::make('reset'),
-                        Button::make('reload')
-                    ]);
+            ->setTableId('blockip-table')
+            ->columns($this->getColumns())
+            ->minifiedAjax()
+            //->dom('Bfrtip')
+            ->orderBy(1)
+            ->selectStyleSingle()
+            ->buttons([
+                Button::make('excel'),
+                Button::make('csv'),
+                Button::make('pdf'),
+                Button::make('print'),
+                Button::make('reset'),
+                Button::make('reload')
+            ]);
     }
 
     /**
@@ -79,13 +77,14 @@ class BlockIPDataTable extends DataTable
             Column::make('ip'),
 
             Column::computed('action')
-                  ->exportable(false)
-                  ->printable(false)
-                  ->width(200)
-                  ->addClass('text-center'),
+                ->exportable(false)
+                ->printable(false)
+                ->width(200)
+                ->addClass('text-center'),
 
         ];
     }
+
 
     /**
      * Get the filename for export.

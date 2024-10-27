@@ -9,7 +9,7 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="dropdown active">
-                <a href="{{ route('dashboard') }} " class="nav-link"><i
+                <a href="{{ route('admin.dashboard') }} " class="nav-link"><i
                         class="fas fa-fire"></i><span>Dashboard</span></a>
 
             </li>
@@ -18,7 +18,7 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-list"></i>
                     <span>Manage Channels</span></a>
                 <ul class="dropdown-menu">
-                    <li class=" "><a class="nav-link" href="{{ route('channel.index') }}">All Channels</a></li>
+                    <li class=" "><a class="nav-link" href="{{ route('admin.channel.index') }}">All Channels</a></li>
                 </ul>
             </li>
 
@@ -26,7 +26,7 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-list"></i>
                     <span>Users IP</span></a>
                 <ul class="dropdown-menu">
-                    <li class=" "><a class="nav-link" href="{{ route('user.index') }}">Users IP</a></li>
+                    <li class=" "><a class="nav-link" href="{{ route('admin.user.index') }}">Users IP</a></li>
                 </ul>
             </li>
 
@@ -34,7 +34,7 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-list"></i>
                     <span>Blocked List</span></a>
                 <ul class="dropdown-menu">
-                    <li class=" "><a class="nav-link" href="{{ route('blockip.index') }}">Users IP</a></li>
+                    <li class=" "><a class="nav-link" href="{{ route('admin.blockip.index') }}">Users IP</a></li>
                 </ul>
             </li>
 

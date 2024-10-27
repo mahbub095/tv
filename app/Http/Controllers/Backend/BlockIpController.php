@@ -49,7 +49,7 @@ class BlockIpController extends Controller
         $blockip->save();
 
         toastr('Created Successfully!', 'success');
-        return redirect()->route('blockip.index');
+        return redirect()->route('admin.blockip.index');
     }
 
     /**
@@ -83,7 +83,7 @@ class BlockIpController extends Controller
         $blockip->save();
 
         toastr('Updated Successfully!', 'success');
-        return redirect()->route('blockip.index');
+        return redirect()->route('admin.blockip.index');
     }
 
     /**

@@ -16,7 +16,7 @@
                 <div class="col-12 col-md-12 col-lg-7">
                     <div class="card">
                         <form method="post" class="needs-validation" novalidate=""
-                              action="{{ route('profile.update') }}" enctype="multipart/form-data">
+                              action="{{ route('admin.profile.update') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="card-header">
                                 <h4>Update Profile</h4>
@@ -60,7 +60,7 @@
                     <div class="card">
 
                         <form method="post" class="needs-validation" novalidate=""
-                              action="{{ route('password.update') }}" enctype="multipart/form-data">
+                              action="{{ route('admin.password.update') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="card-header">
                                 <h4>Update Password</h4>
