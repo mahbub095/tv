@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\BlockIpController;
 use App\Http\Controllers\Backend\ChannelController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+
+/** Category Route */
+Route::put('change-status', [CategoryController::class, 'changeStatus'])->name('category.change-status');
+Route::resource('category', CategoryController::class);
 
 Route::resource('channel', ChannelController::class);
 Route::resource('blockip', BlockIpController::class);
