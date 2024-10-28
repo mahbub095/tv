@@ -73,51 +73,24 @@
 
         <div class="col-12 col-lg-4">
             <div class="channel-list">
-            @foreach ($catagories as $item)
-                <ul class="nav nav-tabs nav-justified" style="margin-bottom: 15px">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" data-type="Bangla">{{$item->name}}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-type="English">English</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-type="Hindi">Hindi</a>
-                    </li>
-                @endforeach 
-                  
-                </ul>
-                <!-- <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
 
-                    @foreach ($channels as $channel)
-                        @if ($channel->status === 0)
+                    <ul class="nav nav-tabs nav-justified" style="margin-bottom: 15px">
+                        @foreach ($catagories as $item)
+                        <li class="nav-item">
+                            <a class="nav-link active" data-filter=".category-{{$loop->index}}">{{$item->name}}</a>
+                        </li>
+                        @endforeach
+
+                    </ul>
+                    <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
+
+                        @foreach ($channels as $channel)
                             <li class="Bangla">
-
                                 <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                   data-link="{{ $channel->slug }}"><img src="{{ asset($channel->logo) }}" alt=""/></a>
+                                   data-li nk="{{ $channel->slug }}"><img src="{{ asset($channel->logo) }}" alt=""/></a>
                             </li>
-                        @elseif ($channel->status == 1)
-                            <li class="English">
-                                <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                   data-link="{{ $channel->slug }}"><img src="{{ asset($channel->logo) }}" alt=""/></a>
-                            </li>
-                        @elseif ($channel->status == 2)
-                            <li class="Sports">
-                                <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                   data-link="{{ $channel->slug }}"><img src="{{ asset($channel->logo) }}" alt=""/></a>
-
-                            </li>
-                        @elseif ($channel->status == 3)
-                            <li class="Hindi">
-                                <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                   data-link="{{ $channel->slug }}"><img src=" {{ asset('frontend/img/gtv.jpg') }}"
-                                                                         alt=""/></a>
-
-                            </li>
-                        @endif
-                    @endforeach
-
-                </ul> -->
+                        @endforeach
+                    </ul>
             </div>
         </div>
     </div>
