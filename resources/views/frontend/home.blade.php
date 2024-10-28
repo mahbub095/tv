@@ -73,9 +73,10 @@
 
         <div class="col-12 col-lg-4">
             <div class="channel-list">
+            @foreach ($catagories as $item)
                 <ul class="nav nav-tabs nav-justified" style="margin-bottom: 15px">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" data-type="Bangla">Bangla</a>
+                        <a class="nav-link active" href="#" data-type="Bangla">{{$item->name}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-type="English">English</a>
@@ -83,17 +84,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-type="Hindi">Hindi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-type="Sports">Sports</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-type="Cartoon">Cartoon</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-type="Others">Others</a>
-                    </li>
+                @endforeach 
+                  
                 </ul>
-                <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
+                <!-- <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
 
                     @foreach ($channels as $channel)
                         @if ($channel->status === 0)
@@ -123,7 +117,7 @@
                         @endif
                     @endforeach
 
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>

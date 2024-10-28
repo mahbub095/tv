@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Channel;
+use App\Models\HomePageSetting;
+use App\Models\Category;
 use Illuminate\Http\Request;
+
 
 class FrontendController extends Controller
 {
@@ -16,7 +19,8 @@ class FrontendController extends Controller
     public function index()
     {
         $channels = Channel::all();
-        return view('frontend.home', compact('channels'));
+        $catagories = Category::all();
+        return view('frontend.home', compact('channels','catagories'));
     }
 
 }
