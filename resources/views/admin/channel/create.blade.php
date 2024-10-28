@@ -35,12 +35,20 @@
                                 </div>
 
                                 <div class="form-group">
+                                <label for="inputState">Category</label>
+                                            <select id="inputState" class="form-control main-category" name="category">
+                                                <option value="">Select</option>
+                                                @foreach ($categories as $category)
+                                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                                @endforeach
+                                            </select>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="inputState">Status</label>
                                     <select id="inputState" class="form-control" name="status">
-                                        <option value="0">Bangla</option>
-                                        <option value="1">English</option>
-                                        <option value="2">Sports</option>
-                                        <option value="3">Hindi</option>
+                                        <option value="1">Active</option>
+                                        <option value="0">Inactive</option>
                                     </select>
                                 </div>
                                 <button type="submmit" class="btn btn-primary">Create</button>

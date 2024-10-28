@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\DataTables\ChannelDataTable;
 use App\Models\Channel;
+use App\Models\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Traits\ImageUploadTrait;
@@ -32,7 +33,8 @@ class ChannelController extends Controller
      */
     public function create()
     {
-        return view('admin.channel.create');
+        $categories = Category::all();
+        return view('admin.channel.create',compact('categories'));
     }
 
     /**
@@ -72,6 +74,7 @@ class ChannelController extends Controller
      */
     public function edit(string $id)
     {
+        $categories = Category::all();
         $channel = Channel::findOrFail($id);
         return view('admin.channel.edit', compact('channel'));
     }
