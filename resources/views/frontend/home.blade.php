@@ -1,105 +1,93 @@
 <!DOCTYPE html>
 <html>
+    <head>
 
-<head>
-    <meta charset="utf-8"/>
-    <title>Eleven Plus Stream</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <meta charset="utf-8">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Eleven Plus Stream</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet"/>
-    <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet"/>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+        <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+        <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet"/>
 
-    <script type="text/javascript" src="{{ asset('frontend/js/clappr.min.js') }}"></script>
-    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet"/>
-    <script type="text/javascript" src="{{ asset('frontend/js/clappr-chromecast-plugin.min.js') }}"></script>
-    <style class="clappr-style">
-        @font-face {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 400;
-            src: local("Roboto"), local("Roboto-Regular"),
-            url(https://cdn.jsdelivr.net/npm/clappr@latest/dist/38861cba61c66739c1452c3a71e39852.ttf) format("truetype");
-        }
+        <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-        body {
-            background: #000 url(img/bgu.jpg) top center;
-        }
-    </style>
-</head>
+        <script type="text/javascript" src="{{asset('frontend/js/clappr.min.js')}}"></script>
+        <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
+        <script type="text/javascript" src="{{asset('frontend/js/clappr-chromecast-plugin.min.js')}}"></script>
+        <style class="clappr-style">
+            @font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://cdn.jsdelivr.net/npm/clappr@latest/dist/38861cba61c66739c1452c3a71e39852.ttf) format("truetype")}
+            body {
+                background: #000 url(img/bgu.jpg) top center;
+            }
+        </style>
+    </head>
+    <body>
 
-<body>
+        <div class="container-fluid">
+            <div class="row justify-content-center" style="margin-top: 50px;">
 
-<div class="navbar navbar-dark bg-dark box-shadow">
-    <div class="container d-flex justify-content-between"><a href="/"><img src="/images/logo.png" width="130"
-                                                                           height="75" alt="Jadoo Broadband"></a>
-        <button class="btn btn-outline-secondary btn-lg" type="button"
-                style="border-radius: 50%; width: 50px; height: 50px;"><span><svg stroke="currentColor"
-                                                                                  fill="currentColor" stroke-width="0"
-                                                                                  viewBox="0 0 512 512" height="1em"
-                                                                                  width="1em"
-                                                                                  xmlns="http://www.w3.org/2000/svg"
-                                                                                  style="margin: 2px -4px; font-size: 1.3em;"><path
-                        d="M192 277.4h189.7l-43.6 44.7L368 352l96-96-96-96-31 29.9 44.7 44.7H192v42.8z"></path><path
-                        d="M255.7 421.3c-44.1 0-85.5-17.2-116.7-48.4-31.2-31.2-48.3-72.7-48.3-116.9 0-44.1 17.2-85.7 48.3-116.9 31.2-31.2 72.6-48.4 116.7-48.4 44 0 85.3 17.1 116.5 48.2l30.3-30.3c-8.5-8.4-17.8-16.2-27.7-23.2C339.7 61 298.6 48 255.7 48 141.2 48 48 141.3 48 256s93.2 208 207.7 208c42.9 0 84-13 119-37.5 10-7 19.2-14.7 27.7-23.2l-30.2-30.2c-31.1 31.1-72.5 48.2-116.5 48.2zM448.004 256.847l-.849-.848.849-.849.848.849z"></path></svg></span>
-        </button>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row justify-content-center" style="margin-top: 50px">
-        <div class="col-12 col-lg-8">
-            <div class="embed-responsive embed-responsive-16by9">
-                <div id="player" class="embed-responsive-item">
-                    <video id="vid1" class="video-js vjs-default-skin vjs-fluid" poster="http://i.imgur.com/xxqm7EE.png"
-                           width="640" height="320" controls autoplay preload="none"
-                           data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
+                <div class="col-12 col-lg-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <div id="player" class="embed-responsive-item">
+                            <video id="vid1" class="video-js vjs-default-skin vjs-fluid" poster="http://i.imgur.com/xxqm7EE.png" width="640" height="360" controls autoplay preload="none" data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL", "src": "https://11plus.live/live/tsports/index.m3u8"}]}'></video>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="col-12 col-lg-4">
-            <div class="channel-list">
-
-                    <ul class="nav nav-tabs nav-justified" style="margin-bottom: 15px">
-                        @foreach ($catagories as $item)
-                        <li class="nav-item">
-                            <a class="nav-link active" data-filter=".category-{{$loop->index}}">{{$item->name}}</a>
-                        </li>
-                        @endforeach
-
-                    </ul>
-                    <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
-
-                        @foreach ($channels as $channel)
-                            <li class="Bangla">
-                                <a id="myLink" title="Click" href="javascript:;" class="channel"
-                                   data-li nk="{{ $channel->slug }}"><img src="{{ asset($channel->logo) }}" alt=""/></a>
+                <div class="col-12 col-lg-4">
+                    <div class="channel-list">
+                        <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 15px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-type="Bangla">Bangla</a>
                             </li>
-                        @endforeach
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"  data-type="English">English</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"  data-type="Hindi">Hindi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"  data-type="Sports">Sports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"  data-type="Cartoon">Cartoon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"  data-type="Others">Others</a>
+                            </li>
+                        </ul>
+                        <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
+
+                        <li class="Bangla"><a id="myLink" title="Click" href="javascript:;" class='channel' data-link="/live/gazitv/index.m3u8"><img src="img/gtv.jpg" alt=""></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
-</div>
 
-<script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
-<script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
-<script src="{{ asset('frontend/js/scripts.js') }}"></script>
-<script src="{{asset('frontend/js/Youtube.min.js')}}"></script>
-</body>
+     
+                                        
 
+        <script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
+        <script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
+        <script src="{{asset('frontend/js/scripts.js')}}"></script>
+
+    </body>
 </html>
+
+
