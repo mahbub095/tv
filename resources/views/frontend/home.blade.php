@@ -63,20 +63,27 @@
 
             <div class="col-12 col-lg-4">
                 <div class="channel-list">
-                    <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 15px;">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#" data-type="Bangla">Test</a>
-                        </li>
+                    <nav>
+                        <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 15px;">
 
-                        @foreach(App\Models\Category::all() as $category)
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-type="{{ $category->id }}">{{ $category->name }}</a>
+                                <a class="nav-link active" href="#" data-type="English">ALL</a>
                             </li>
-                        @endforeach
-                    </ul>
 
+                            @foreach(App\Models\Category::all() as $category)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-type="{{ $category->id }}">{{ $category->name }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </nav>
                     <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
+
+                    <li class="English"><a id="myLink" title="Click" href="javascript:;" class='channel' data-link="/live/tsports/index.m3u8"><img src="img/tsports.jpg" alt=""></a></li>
+                           
+
                         @foreach(App\Models\Channel::all() as $channel)
+
                             <li class="{{ $channel->category_id }}"><a id="myLink" title="Click" href="javascript:;"
                                     class='channel' data-link="{{ $channel->slug }}"><img src="{{asset(($channel->logo))}}"
                                         alt=""></a></li>
