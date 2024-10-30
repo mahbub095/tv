@@ -28,6 +28,7 @@
     <script type="text/javascript" src="{{asset('frontend/js/clappr.min.js')}}"></script>
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
     <script type="text/javascript" src="{{asset('frontend/js/clappr-chromecast-plugin.min.js')}}"></script>
+
     <style class="clappr-style">
         @font-face {
             font-family: Roboto;
@@ -44,54 +45,43 @@
 
 <body>
 
-    <div class="container-fluid">
-        <div class="row justify-content-center" style="margin-top: 50px;">
 
+
+    <div class="container-fluid">
+        <div class="row justify-content-center" style="margin-top: 50px">
             <div class="col-12 col-lg-8">
                 <div class="embed-responsive embed-responsive-16by9">
                     <div id="player" class="embed-responsive-item">
                         <video id="vid1" class="video-js vjs-default-skin vjs-fluid"
-                            poster="http://i.imgur.com/xxqm7EE.png" width="640" height="360" controls autoplay
+                            poster="http://i.imgur.com/xxqm7EE.png" width="640" height="320" controls autoplay
                             preload="none"
-                            data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL", "src": "https://11plus.live/live/tsports/index.m3u8"}]}'></video>
+                            data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
                     </div>
                 </div>
             </div>
 
 
             <div class="col-12 col-lg-4">
-
                 <div class="channel-list">
-                    <div class="text-center mx-auto mb-40">
-                        <div class="channel-category">
-                            <nav>
-                                <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 25px;">
-                                    @foreach(App\Models\Category::all() as $category)
-                            
-                                            <a class="nav-link active" href="#" data-filter=".cat{{ $category->id }}">{{$category->name}}</a>
-                                    
-                                    @endforeach
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                    <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 15px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-type="Bangla">Test</a>
+                        </li>
 
-                    <div class="row grid channel-item">
-                        @foreach(App\Models\Channel::latest()->get() as $channel)
-                            <div class="col-lg-4 grid-item cat{{ $category->category_id }} mb-60">
-
-                                <div class="channel">
-                                    <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
-
-                                        <li><a id="myLink" data-filter=".cat{{ $channel->category_id }}" title="Click" href="javascript:;"
-                                                class='channel' data-link="{{ ($channel->slug) }}"><img
-                                                    src="{{ asset($channel->logo) }}" alt=""> </a></li>
-
-                                    </ul> 
-                                </div>
-                            </div>
+                        @foreach(App\Models\Category::all() as $category)
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-type="{{ $category->id }}">{{ $category->name }}</a>
+                            </li>
                         @endforeach
-                    </div>
+                    </ul>
+
+                    <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
+                        @foreach(App\Models\Channel::all() as $channel)
+                            <li class="{{ $channel->category_id }}"><a id="myLink" title="Click" href="javascript:;"
+                                    class='channel' data-link="{{ $channel->slug }}"><img src="{{asset(($channel->logo))}}"
+                                        alt=""></a></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
 
@@ -100,10 +90,11 @@
 
 
 
-
     <script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
     <script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
     <script src="{{asset('frontend/js/scripts.js')}}"></script>
+    <script src="{{asset('frontend/js/Youtube.js')}}"></script>
+    <script src="{{asset('frontend/js/Youtube.min.js')}}"></script>
 
 </body>
 
