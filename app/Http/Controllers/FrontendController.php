@@ -18,9 +18,14 @@ class FrontendController extends Controller
 
     public function index()
     {
-        $channels = Channel::get();
-        $catagories = Category::get();
-        return view('frontend.home', compact('channels','catagories'));
+    
+        $categories=Category::select('name','id')->get();
+        $channels=Channel::select('logo','name', 'slug','cat_id')->latest()->get();
+
+        // return view('frontend.home', compact('channels','categories'));
+
+        return response()->json(['category'=>$categories,'channel'=>$channels]);
+
     }
 
 }
