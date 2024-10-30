@@ -20,11 +20,11 @@ class FrontendController extends Controller
     {
     
         $categories=Category::select('name','id')->get();
-        $channels=Channel::select('logo','name', 'slug','cat_id')->latest()->get();
+        $channels=Channel::select('logo','name', 'slug','category_id')->latest()->get();
 
-        // return view('frontend.home', compact('channels','categories'));
+        return view('frontend.home', compact('channels','categories'));
 
-        return response()->json(['category'=>$categories,'channel'=>$channels]);
+        // return response()->json(['category'=>$categories,'channel'=>$channels]);
 
     }
 
