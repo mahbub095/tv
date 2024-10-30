@@ -51,6 +51,7 @@ class ChannelController extends Controller
         $logoPath = $this->uploadImage($request, 'logo', 'uploads');
         $channel = new Channel();
 
+        $channel->category_id = $request->category;
         $channel->logo = $logoPath;
         $channel->name = $request->name;
         $channel->slug = $request->slug;

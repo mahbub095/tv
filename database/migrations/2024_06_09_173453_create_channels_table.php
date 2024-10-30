@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('channels', function (Blueprint $table) {
             $table->id();
+            $table->integer('category_id');
             $table->text('logo')->nullable();
             $table->string('name');
             $table->string('slug');

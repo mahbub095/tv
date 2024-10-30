@@ -47,32 +47,24 @@
                     </div>
                 </div>
 
+                
                 <div class="col-12 col-lg-4">
+               
                     <div class="channel-list">
+                   
+                   
                         <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 15px;">
+                        @foreach ($catagories as $category)
                             <li class="nav-item">
-                                <a class="nav-link active" href="#" data-type="Bangla">Bangla</a>
+                                <a class="nav-link active" href="#" data-filter=".category-{{$loop->index}}" data-type=" ">{{$category ->name}}</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"  data-type="English">English</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"  data-type="Hindi">Hindi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"  data-type="Sports">Sports</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"  data-type="Cartoon">Cartoon</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"  data-type="Others">Others</a>
-                            </li>
+                            @endforeach  
                         </ul>
+                       
                         <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
-
-                        <li class="Bangla"><a id="myLink" title="Click" href="javascript:;" class='channel' data-link="/live/gazitv/index.m3u8"><img src="img/gtv.jpg" alt=""></a></li>
-
+                        @foreach ($channels as $cha)
+                        <li class="Bangla2"><a id="myLink"  data-filter=".category-{{$loop->index}}" title="Click" href="javascript:;" class='channel' data-link="/live/gazitv/index.m3u8"><img src="img/gtv.jpg" alt=""></a></li>
+                        @endforeach  
                         </ul>
                     </div>
                 </div>
