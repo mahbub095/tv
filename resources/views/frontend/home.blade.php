@@ -50,9 +50,8 @@
             <div class="col-12 col-lg-8">
                 <div class="embed-responsive embed-responsive-16by9">
                     <div id="player" class="embed-responsive-item">
-                        <video id="vid1" class="video-js vjs-default-skin vjs-fluid"
-                            poster="http://i.imgur.com/xxqm7EE.png" width="640" height="360" controls autoplay
-                            preload="none"
+                        <video id="vid1" class="video-js vjs-default-skin vjs-fluid" poster="" width="640" height="360"
+                            controls autoplay preload="none"
                             data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL", "src": "https://11plus.live/live/tsports/index.m3u8"}]}'></video>
                     </div>
                 </div>
@@ -66,36 +65,30 @@
                         <div class="channel-category">
                             <nav>
                                 <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 25px;">
+
                                     @foreach(App\Models\Category::all() as $category)
-                            
-                                            <a class="nav-link active" href="#" data-filter=".cat{{ $category->id }}">{{$category->name}}</a>
-                                    
+
+                                        <!-- <a class="nav-link active" href="#"
+                                            data-filter=".cat{{ $category->id }}">{{$category->name}}</a> -->
+                                        <a class="nav-link active" href="#">{{$category->name}}</a>
                                     @endforeach
                                 </ul>
                             </nav>
                         </div>
                     </div>
 
-                    <div class="row grid channel-item">
-                        @foreach(App\Models\Channel::latest()->get() as $channel)
-                            <div class="col-lg-4 grid-item cat{{ $category->category_id }} mb-60">
-
-                                <div class="channel">
-                                    <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
-
-                                        <li><a id="myLink" data-filter=".cat{{ $channel->category_id }}" title="Click" href="javascript:;"
-                                                class='channel' data-link="{{ ($channel->slug) }}"><img
-                                                    src="{{ asset($channel->logo) }}" alt=""> </a></li>
-
-                                    </ul> 
-                                </div>
-                            </div>
+                    <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap ">
+                        @foreach(App\Models\Channel::latest()->get() as $channels)
+                            <li class=".cat{{ $channels->id }}"><a data-filter=".cat{{ $channels->id }}" id="myLink" title="Click" href="javascript:;"
+                                    data-link="{{ ($channels->slug) }}"><img src="{{ asset($channels->logo) }}" alt=""> </a>
+                            </li>
                         @endforeach
-                    </div>
+                    </ul>
                 </div>
             </div>
-
         </div>
+
+    </div>
     </div>
 
 

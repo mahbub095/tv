@@ -2,7 +2,7 @@ var vgsPlayer, poster;
 vgsPlayer = videojs("vid1");
 //vgsPlayer.poster('https://img.youtube.com/vi/aqz-KE-bpKQ/maxresdefault.jpg');
 //vgsPlayer.poster('https://c0.wallpaperflare.com/preview/127/363/717/interior-tv-kangaroo-road.jpg');
-vgsPlayer.poster("//raw.githubusercontent.com/tvbd/stream/main/img/t20.png");
+vgsPlayer.poster("");
 /********* LOAD URL *********/
 $("#vidlink li a").on("click", function (e) {
   //    e.preventDefault();
@@ -49,7 +49,7 @@ function vsgLoadVideo(vidURL, poster) {
   var type = getType(vidURL);
 
   if (getId(vidURL))
-    poster = "http://img.youtube.com/vi/" + getId(vidURL) + "/hqdefault.jpg";
+    poster = "http://img.youtube.com/vi/" + getId(vidURL) + "/";
 
   vgsPlayer.src({
     src: vidURL,
@@ -57,7 +57,7 @@ function vsgLoadVideo(vidURL, poster) {
   });
   if (poster) vgsPlayer.poster(poster);
   //vgsPlayer.poster("//i.imgur.com/aE0LoTe.png");
-  else vgsPlayer.poster("//11plus.live/videos/playerback.png");
+  else vgsPlayer.poster(" ");
 
   // play seem to trigger to fast before Youtube is ready
 
