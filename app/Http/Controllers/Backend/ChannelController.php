@@ -77,7 +77,7 @@ class ChannelController extends Controller
     {
         $categories = Category::all();
         $channel = Channel::findOrFail($id);
-        return view('admin.channel.edit', compact('channel'));
+        return view('admin.channel.edit', compact('channel','categories'));
     }
 
     /**
@@ -92,6 +92,7 @@ class ChannelController extends Controller
 
 
         $channel = Channel::findOrFail($id);
+        $channel->category_id = $request->category;
 
         $logoPath = $this->updateImage($request, 'logo', 'uploads', $channel->logo);
         $channel->logo = empty(!$logoPath) ? $logoPath : $channel->logo;
