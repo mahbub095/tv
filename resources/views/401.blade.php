@@ -21,6 +21,19 @@
         authentication credentials for the target resource. The server generating a 401 response MUST send a
         WWW-Authenticate header field (Section 4.1) containing at least one challenge applicable to the target
         resource.</p>
+
+        <!-- Test
+        
+          @if ($channel->status == 2)
+                            <li class="Sports">
+                                <a id="myLink" title="Click" href="javascript:;" class="channel"
+                        
+                                    data-link="{{ $channel->slug }}"><img src=" {{ asset($channel->logo) }}" alt="" /></a>
+
+                            </li>
+        
+
+        -->
 </div>
 </body>
 </html>

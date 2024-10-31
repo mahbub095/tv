@@ -21,8 +21,9 @@ class FrontendController extends Controller
     
         $categories=Category::select('name','id')->get();
         $channels=Channel::select('logo','name', 'slug','category_id')->latest()->get();
+        $channelsData = Channel::paginate(10);
 
-        return view('frontend.home', compact('channels','categories'));
+        return view('frontend.home', compact('channels','categories','channelsData'));
 
         // return response()->json(['category'=>$categories,'channel'=>$channels]);
 
