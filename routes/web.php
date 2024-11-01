@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\Installer\InstallerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('404', function () {
+    return abort(404);
+})->name('404');
+
+Route::get('/install/check/{param}', [InstallerController::class, 'check'])->name('install.check');
+Route::get('pre/install', [InstallerController::class, 'preinstall'])->name('preinstall');
+Route::get('/install', [InstallerController::class, 'install'])->name('install')->middleware('installer');
+Route::get('/install/info', [InstallerController::class, 'info'])->name('install.info');
+Route::post('/install/store', [InstallerController::class, 'send']);
 
 require __DIR__ . '/auth.php';
 
