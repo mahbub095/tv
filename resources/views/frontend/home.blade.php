@@ -79,7 +79,7 @@
                         <video id="vid1" class="video-js vjs-default-skin vjs-fluid"
                             poster="http://i.imgur.com/xxqm7EE.png" width="640" height="320" controls autoplay
                             preload="none"
-                            data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
+                            data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","application/dash+xml","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
 
                     <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 15px;">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#" data-type="Bangla">ALL</a>
+                            <a class="nav-link active" href="#" data-type="Bangla">Random</a>
                         </li>
 
                         @foreach(App\Models\Category::all() as $category)
@@ -101,7 +101,7 @@
 
                     <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
 
-                        @foreach(App\Models\Channel::all() as $channel)
+                        @foreach(App\Models\Channel::all()->take(16) as $channel)
                             @if ($channel->name)
                                 <li class="Bangla">
                                     <a id="myLink" title="Click" href="javascript:;" class="channel"
@@ -124,10 +124,16 @@
         </div>
     </div>
 
-
+    <script src="{{asset('frontend/js/dash.all.min.js')}}"></script>
+    <script src="{{asset('frontend/js/dash.all.debug.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.js" integrity="sha512-UILPODLUJKA624A9/OruLNgBsMOYv+ON5Mw8f3ZKK+QTjxjncEtinZw9nVecHl4Vzd1+eOlEcGLqjpaQrIy49g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.js" integrity="sha512-UILPODLUJKA624A9/OruLNgBsMOYv+ON5Mw8f3ZKK+QTjxjncEtinZw9nVecHl4Vzd1+eOlEcGLqjpaQrIy49g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.radiantmediatechs.com/rmp/8.4.10/js/rmp.min.js"></script>
 
     <script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
     <script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
+
+    <script src="{{asset('frontend/js/player-live.js')}}"></script>
     <script src="{{asset('frontend/js/scripts.js')}}"></script>
     <script src="{{asset('frontend/js/Youtube.js')}}"></script>
     <script src="{{asset('frontend/js/Youtube.min.js')}}"></script>
