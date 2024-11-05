@@ -78,13 +78,8 @@
                     <div id="player" class="embed-responsive-item">
                         <video id="vid1" class="video-js vjs-default-skin vjs-fluid"
                             poster="http://i.imgur.com/xxqm7EE.png" width="640" height="320" controls autoplay
-<<<<<<< HEAD
                             preload="metadata"
                             data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
-=======
-                            preload="none"
-                            data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","application/dash+xml","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
->>>>>>> f9cee633da7d1301247321b0f5e1522f28346e04
                     </div>
                 </div>
             </div>
@@ -106,7 +101,7 @@
 
                     <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
 
-                        @foreach(App\Models\Channel::all()->take(16) as $channel)
+                        @foreach(App\Models\Channel::all()->take(8) as $channel)
                             @if ($channel->name)
                                 <li class="Bangla">
                                     <a id="myLink" title="Click" href="javascript:;" class="channel"

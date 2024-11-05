@@ -74,9 +74,8 @@ class ChannelDataTable extends DataTable
     {
         return [
 
-            Column::make('id'),
+            Column::make('id')->width(05),
             Column::make('logo')->width(05),
-            Column::make('slug'),
             Column::make('name')->width(200),
 
             Column::computed('action')
