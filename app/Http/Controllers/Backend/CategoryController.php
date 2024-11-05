@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\DataTables\CategoryDataTable;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Channel;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 use Str;
@@ -97,6 +98,11 @@ class CategoryController extends Controller
     public function destroy(string $id)
     {
         $category = Category::findOrFail($id);
+        $channels = Channel::where('category_id', $category->id)->count();
+       
+        if($channels > 0){
+            return response(['status' => 'error', 'message' => 'This items contain, category for delete this you have to delete channels first!']);
+        }
       
         $category->delete();
 
