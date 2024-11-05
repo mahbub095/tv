@@ -78,7 +78,7 @@
                     <div id="player" class="embed-responsive-item">
                         <video id="vid1" class="video-js vjs-default-skin vjs-fluid"
                             poster="http://i.imgur.com/xxqm7EE.png" width="640" height="320" controls autoplay
-                            preload="none"
+                            preload="metadata"
                             data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
                     </div>
                 </div>
