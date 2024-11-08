@@ -17,7 +17,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet" />
 
     <!--[if lt IE 9]>
@@ -25,8 +25,9 @@
                 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-    <script type="text/javascript" src="{{asset('frontend/js/clappr.min.js')}}"></script>
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
+    <!-- Clappr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <script type="text/javascript" src="{{asset('frontend/js/clappr-chromecast-plugin.min.js')}}"></script>
 
     <style class="clappr-style">
@@ -52,7 +53,6 @@
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
 
-
                 <button class="btn btn-outline-secondary btn-lg" type="submit"
                     style="border-radius: 50%; width: 50px; height: 50px;">
 
@@ -76,9 +76,9 @@
             <div class="col-12 col-lg-8">
                 <div class="embed-responsive embed-responsive-16by9">
                     <div id="player" class="embed-responsive-item">
-                        <video id="vid1" class="video-js vjs-default-skin vjs-fluid"
-                            poster="http://i.imgur.com/xxqm7EE.png" width="640" height="320" controls autoplay
-                            preload="metadata"
+                        <video id="vid1" class="video-js vjs-default-skin vjs-fluid" tabindex="0"
+                            crossorigin="anonymous" poster="http://i.imgur.com/xxqm7EE.png" width="640" height="264"
+                            controls autoplay preload="auto"
                             data-setup='{ "techOrder": ["html5", "flash", "youtube"], "sources": [{ "type": "application/x-mpegURL","src": "https://indiatodaylive.akamaized.net/hls/live/2014320/indiatoday/indiatodaylive/playlist.m3u8"}]}'></video>
                     </div>
                 </div>
@@ -124,13 +124,12 @@
         </div>
     </div>
 
-    <script src="{{asset('frontend/js/dash.all.min.js')}}"></script>
-    <script src="{{asset('frontend/js/dash.all.debug.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.js" integrity="sha512-UILPODLUJKA624A9/OruLNgBsMOYv+ON5Mw8f3ZKK+QTjxjncEtinZw9nVecHl4Vzd1+eOlEcGLqjpaQrIy49g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.js" integrity="sha512-UILPODLUJKA624A9/OruLNgBsMOYv+ON5Mw8f3ZKK+QTjxjncEtinZw9nVecHl4Vzd1+eOlEcGLqjpaQrIy49g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.js"
+        integrity="sha512-UILPODLUJKA624A9/OruLNgBsMOYv+ON5Mw8f3ZKK+QTjxjncEtinZw9nVecHl4Vzd1+eOlEcGLqjpaQrIy49g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.radiantmediatechs.com/rmp/8.4.10/js/rmp.min.js"></script>
-
     <script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
     <script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
 
     <script src="{{asset('frontend/js/player-live.js')}}"></script>
