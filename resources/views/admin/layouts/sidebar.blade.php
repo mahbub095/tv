@@ -44,7 +44,7 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-list"></i>
                     <span>Blocked List</span></a>
                 <ul class="dropdown-menu">
-                    <li class=" "><a class="nav-link" href="{{ route('admin.blockip.index') }}">Users IP</a></li>
+                    <li class=" "><a class="nav-link" href="{{ route('admin.blockip.index') }}">Block IP</a></li>
                 </ul>
             </li>
 

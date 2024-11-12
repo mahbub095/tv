@@ -1,5 +1,4 @@
 @extends('admin.layouts.master')
-
 @section('content')
     <!-- Main Content -->
     <section class="section">

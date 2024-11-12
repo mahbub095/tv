@@ -5,7 +5,110 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63efdeb8-50dd-4f39-8d72-a98519fac899" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tv.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tv.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ChannelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ChannelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/1613816714_79b59b54322475cc41545006e5b9a5a5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/1893681344_79b59b54322475cc41545006e5b9a5a5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/2016941529_channel 24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/407265300_depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/789484179_79b59b54322475cc41545006e5b9a5a5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/789631816_depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/82867811_79b59b54322475cc41545006e5b9a5a5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/98915321_depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_666a6c50c8458.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_667838c8ad533.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_667839f52e8e2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_66783a5501f77.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_66783b3053f4c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_670a786c95741.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671cfe0121a40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671e0350e2ce6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671e03700c7cb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671e547637750.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671e547637ef1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671e56d0163df.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671e56d016bce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671e582f75c97.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671e582f764ce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671efbcfbc3ea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_671efc2eb56c1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6721dee5e8d20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6721e03baf70c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6721e0c727f97.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6721efc821c6a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672247b548966.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67226fbfddefd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6722706094313.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6722e977edba1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672337eec6774.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672337f90ae38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67239f057920e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6723ab387acee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6724551a23da8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6724551a2408b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67245865c7b9e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67251d66c6739.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67251e21ed9fe.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6725203c9187b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6725223092700.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672522d49ac58.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672523438b2ff.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67263cd88923f.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67263cde8443b.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67263ce66e7db.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67263d14b3ce0.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_67264ebca683e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6727a70d35e74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6727a7a6bf8ad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6728f59c38828.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6728f7626e687.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6729b35e7be74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6729b37908fb4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_6729b3790951a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672a2f57dc11f.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672a3794ad32d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672a3cd3d482e.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672a3ce646d86.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672a3cea83042.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672a3cfe96d33.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672a3d5a53c9c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672a3d796bd2d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/media_672b913a1cc65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/log-viewer/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/log-viewer/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/log-viewer/app.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/log-viewer/img/log-viewer-128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/log-viewer/img/log-viewer-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/log-viewer/img/log-viewer-64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/log-viewer/mix-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blockIP/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blockIP/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blockIP/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blockIP/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blockIP/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blockIP/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/channel/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/channel/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/channel/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/channel/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/channel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/channel/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/profile/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/logo-setting.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/logo-setting.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/installer/info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/installer/info.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/installer/requirments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/installer/requirments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-5.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/semantic-ui.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-5.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-default.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-tailwind.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/tailwind.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +270,9 @@
       <path value="$PROJECT_DIR$/vendor/stevebauman/location" />
       <path value="$PROJECT_DIR$/vendor/maxmind/web-service-common" />
       <path value="$PROJECT_DIR$/vendor/maxmind-db/reader" />
+      <path value="$PROJECT_DIR$/vendor/spatie/error-solutions" />
+      <path value="$PROJECT_DIR$/vendor/opcodesio/log-viewer" />
+      <path value="$PROJECT_DIR$/vendor/opcodesio/mail-parser" />
     </include_path>
   </component>
   <component name="ProjectId" id="2hrmPfcbMl727KBcW943jvvviJw" />
@@ -227,6 +333,7 @@
       <workItem from="1730026455971" duration="1826000" />
       <workItem from="1730029159670" duration="137000" />
       <workItem from="1730034748577" duration="4377000" />
+      <workItem from="1731430377898" duration="871000" />
     </task>
     <servers />
   </component>

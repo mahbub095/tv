@@ -4,7 +4,7 @@
     <!-- Main Content -->
     <section class="section">
         <div class="section-header">
-            <h1>Channel</h1>
+            <h1>User lists</h1>
         </div>
 
         <div class="section-body">
@@ -13,7 +13,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>All Categories</h4>
+                            <h4>All User</h4>
                             <div class="card-header-action">
                                 <a href=" " class="btn btn-primary"><i
                                         class="fas fa-plus"></i> Create New</a>

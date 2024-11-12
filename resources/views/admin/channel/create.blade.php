@@ -1,5 +1,4 @@
 @extends('admin.layouts.master')
-
 @section('content')
     <!-- Main Content -->
     <section class="section">
@@ -17,7 +16,8 @@
                             <h4>Create Channel</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.channel.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.channel.store') }}" method="POST"
+                                  enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label>Logo</label>
@@ -35,13 +35,13 @@
                                 </div>
 
                                 <div class="form-group">
-                                <label for="inputState">Category</label>
-                                            <select id="inputState" class="form-control main-category" name="category">
-                                                <option value="">Select</option>
-                                                @foreach ($categories as $category)
-                                                    <option value="{{$category->id}}">{{$category->name}}</option>
-                                                @endforeach
-                                            </select>
+                                    <label for="inputState">Category</label>
+                                    <select id="inputState" class="form-control main-category" name="category">
+                                        <option value="">Select</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
 
                                 <div class="form-group">

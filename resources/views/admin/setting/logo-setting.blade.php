@@ -26,7 +26,7 @@
                     <input type="hidden" class="form-control" name="old_favicon" value="{{ @$logoSetting->favicon }}">
 
                 </div>
-                
+
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>

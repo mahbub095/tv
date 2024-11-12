@@ -48,7 +48,7 @@
 
     <div class="navbar navbar dark:#000">
         <div class="container d-flex justify-content-between"><a href="/"><img src="{{asset($logoSetting->favicon)}}"
-                    width="60px" height="60px" alt="Jadoo Broadband"></a>
+                    width="60px" height="60px" alt="Test Logo"></a>
 
             <form method="POST" action="{{ route('logout') }}">
                 @csrf

@@ -34,7 +34,7 @@ class ChannelController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('admin.channel.create',compact('categories'));
+        return view('admin.channel.create', compact('categories'));
     }
 
     /**
@@ -77,7 +77,7 @@ class ChannelController extends Controller
     {
         $categories = Category::all();
         $channel = Channel::findOrFail($id);
-        return view('admin.channel.edit', compact('channel','categories'));
+        return view('admin.channel.edit', compact('channel', 'categories'));
     }
 
     /**

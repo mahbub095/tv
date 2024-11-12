@@ -1,10 +1,9 @@
 @extends('admin.layouts.master')
-
 @section('content')
     <!-- Main Content -->
     <section class="section">
         <div class="section-header">
-            <h1>Block user</h1>
+            <h1>Blocked users</h1>
 
         </div>
 
@@ -17,15 +16,13 @@
                             <h4>Create block user</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.blockip.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.blockip.store') }}" method="POST"
+                                  enctype="multipart/form-data">
                                 @csrf
-
-
                                 <div class="form-group">
                                     <label>IP</label>
                                     <input type="text" class="form-control" name="ip" value="">
                                 </div>
-
                                 <button type="submit" class="btn btn-primary">Create</button>
                             </form>
                         </div>

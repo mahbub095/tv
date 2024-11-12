@@ -1,10 +1,9 @@
 @extends('admin.layouts.master')
-
 @section('content')
     <!-- Main Content -->
     <section class="section">
         <div class="section-header">
-            <h1>Channel</h1>
+            <h1>Blocked Users</h1>
         </div>
 
         <div class="section-body">
