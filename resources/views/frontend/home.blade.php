@@ -1,3 +1,8 @@
+ 
+
+<marquee style="color: #ffe933; font-size: 24px; font-weight: bold;" scrollamount="15">
+    Test is for testing </marquee>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +12,7 @@
 
     <title> @yield('title')</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/new/css/bootstrap.min.css')}}">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -124,18 +129,15 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.js"
-        integrity="sha512-UILPODLUJKA624A9/OruLNgBsMOYv+ON5Mw8f3ZKK+QTjxjncEtinZw9nVecHl4Vzd1+eOlEcGLqjpaQrIy49g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.radiantmediatechs.com/rmp/8.4.10/js/rmp.min.js"></script>
-    <script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
-    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
-    <script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
 
-    <script src="{{asset('frontend/js/player-live.js')}}"></script>
+    <script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>
+    <script src="https://unpkg.com/@videojs/http-streaming@2.4.2/dist/videojs-http-streaming.min.js"></script>
     <script src="{{asset('frontend/js/scripts.js')}}"></script>
+    <script src="{{asset('frontend/js/player.js')}}"></script>
     <script src="{{asset('frontend/js/Youtube.js')}}"></script>
     <script src="{{asset('frontend/js/Youtube.min.js')}}"></script>
+    <script src="{{asset('frontend/new/cdn.commoninja.com/sdk/latest/commonninja.js')}}" defer></script>
+
     <script>
         @if ($errors->any())
             @foreach ($errors->all() as $error)
