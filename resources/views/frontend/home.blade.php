@@ -13,7 +13,7 @@
 
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="{{asset('frontend/new/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet"/>
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet">
 
@@ -121,9 +121,9 @@
     </div>
 </div>
 
-<script src="{{asset('frontend/new/js/jquery.min.js')}}"></script>
-<script src="{{asset('frontend/new/js/hls.js')}}"></script>
-<script src="{{asset('frontend/new/js/scripts2aec.js')}}"></script>
+<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
+<script src="{{asset('frontend/js/hls.js')}}"></script>
+<script src="{{asset('frontend/js/scripts2aec.js')}}"></script>
 
 <script src="{{asset('frontend/js/scripts.js')}}"></script>
 <script src="{{asset('frontend/js/player.js')}}"></script>
@@ -131,7 +131,11 @@
 <script src="{{asset('frontend/js/clappr-chromecast-plugin.min.js')}}"></script>
 <script src="{{asset('frontend/js/dash.all.min.js')}}"></script>
 <script src="{{asset('frontend/js/Youtube.js')}}"></script>
-<script src="{{asset('frontend/new/commoninja/sdk/latest/commonninja.js')}}" defer></script>
+<script src="{{asset('frontend/js/Youtube.min.js')}}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@commonninja/node-sdk@1.1.37/dist/src/index.min.js"></script>
+<script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer=""></script>
+<script src="https://cdn.commoninja.com/scripts/sdk/main.js" id="cn-main-script" async=""></script>
 
 <script>
     @if ($errors->any())

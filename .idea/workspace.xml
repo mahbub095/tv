@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f78a9ff-e64a-4f8a-a275-b9394dddccc9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tv.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tv.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/gtv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/sony-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/sony-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/star_sports3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/ster-sport-2hd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/stersports1hd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/tsports.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/js/dash.all.debug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/cdn.commoninja.com/sdk/latest/commonninja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/css/style5e1f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/css/video-js.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/hts-cache/new.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/hts-cache/new.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/hts-cache/new.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/hts-cache/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/hts-cache/winprofile.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/img/bgu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/js/hls.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/new/js/hls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/new/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/new/js/scripts2aec.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/new/js/scripts2aec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="2f78a9ff-e64a-4f8a-a275-b9394dddccc9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731682810355</updated>
-      <workItem from="1731682838742" duration="7181000" />
+      <workItem from="1731682838742" duration="7384000" />
     </task>
     <servers />
   </component>
