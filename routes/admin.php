@@ -27,6 +27,8 @@ Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard'
 Route::put('change-status', [CategoryController::class, 'changeStatus'])->name('category.change-status');
 Route::resource('category', CategoryController::class);
 
+
+Route::put('change-status', [ChannelController::class, 'changeStatus'])->name('channel.change-status');
 Route::resource('channel', ChannelController::class);
 Route::resource('blockip', BlockIpController::class);
 Route::resource('user', UserController::class);

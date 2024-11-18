@@ -32,8 +32,21 @@ class ChannelDataTable extends DataTable
                 return "<img width='100px' src='" . asset($query->logo) . "' ></img>";
             })
 
-
-            ->rawColumns(['logo', 'action'])
+            ->addColumn('status', function ($query) {
+                if ($query->status == 1) {
+                    $button = '<label class="custom-switch mt-2">
+                        <input type="checkbox" checked name="custom-switch-checkbox" data-id="' . $query->id . '" class="custom-switch-input change-status" >
+                        <span class="custom-switch-indicator"></span>
+                    </label>';
+                } else {
+                    $button = '<label class="custom-switch mt-2">
+                        <input type="checkbox" name="custom-switch-checkbox" data-id="' . $query->id . '" class="custom-switch-input change-status">
+                        <span class="custom-switch-indicator"></span>
+                    </label>';
+                }
+                return $button;
+            })
+            ->rawColumns(['logo', 'action', 'status'])
             ->setRowId('id');
     }
 
@@ -77,6 +90,7 @@ class ChannelDataTable extends DataTable
             Column::make('id')->width(05),
             Column::make('logo')->width(05),
             Column::make('name')->width(200),
+            Column::make('status')->width(200),
 
             Column::computed('action')
                 ->exportable(false)

@@ -118,4 +118,13 @@ class ChannelController extends Controller
 
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
     }
+
+    public function changeStatus(Request $request)
+    {
+        $channel = Channel::findOrFail($request->id);
+        $channel->status = $request->status == 'true' ? 1 : 0;
+        $channel->save();
+
+        return response(['message' => 'Status has been updated!']);
+    }
 }
