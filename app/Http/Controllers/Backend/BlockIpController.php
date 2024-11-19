@@ -24,7 +24,7 @@ class BlockIpController extends Controller
 
     public function index(BlockIPDataTable $dataTable)
     {
-        return $dataTable->render('admin.blockIP.index');
+        return $dataTable->render('admin.blockip.index');
     }
 
     /**

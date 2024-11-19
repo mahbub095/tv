@@ -48,7 +48,8 @@ class CategoryController extends Controller
 
         toastr('Created Successfully!', 'success');
 
-        return redirect()->route('admin.category.index');
+        // return redirect()->route('admin.category.index');
+        return back();
     }
 
     /**

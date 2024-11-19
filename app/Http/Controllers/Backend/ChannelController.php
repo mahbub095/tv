@@ -59,7 +59,8 @@ class ChannelController extends Controller
         $channel->save();
 
         toastr('Created Successfully!', 'success');
-        return redirect()->route('admin.channel.index');
+        // return redirect()->route('admin.channel.index');
+        return back();
     }
 
     /**
