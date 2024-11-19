@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\ChannelController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ManageUserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -36,3 +37,7 @@ Route::resource('user', UserController::class);
 /** settings routes */
 Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
 Route::put('logo-setting-update', [SettingController::class, 'logoSettingUpdate'])->name('logo-setting-update');
+
+/** manage user routes */
+Route::get('manage-user', [ManageUserController::class, 'index'])->name('manage-user.index');
+Route::post('manage-user', [ManageUserController::class, 'create'])->name('manage-user.create');

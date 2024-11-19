@@ -37,6 +37,8 @@
                     <span>Users IP</span></a>
                 <ul class="dropdown-menu">
                     <li class=" "><a class="nav-link" href="{{ route('admin.user.index') }}">Users IP</a></li>
+                    <li class=" "><a class="nav-link" href="{{ route('admin.manage-user.index') }}">Manage user</a></li>
+            
                 </ul>
             </li>
 

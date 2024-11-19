@@ -125,6 +125,6 @@ class ChannelController extends Controller
         $channel->status = $request->status == 'true' ? 1 : 0;
         $channel->save();
 
-        return response(['message' => 'Status has been updated!']);
+        return response(['message' => 'Channel has been updated!']);
     }
 }
