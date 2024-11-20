@@ -1,5 +1,5 @@
 <marquee style="color: #ffe933; font-size: 24px; font-weight: bold;" scrollamount="15">
-    Test is for testing
+   Online Free TV
 </marquee>
 
 <!DOCTYPE html>
@@ -122,37 +122,43 @@
                 </div>
             </div>
 
-        </div>
-    </div>
 
-    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-    <script src="{{asset('frontend/js/hls.js')}}"></script>
-    <script src="{{asset('frontend/js/scripts2aec.js')}}"></script>
+            <div class="col-12 col-lg-4">
+                <a href='https://www.versicherungen.at/private-krankenversicherung/'>priv. Krankenversicherung</a>
+                <script type='text/javascript'
+                    src='https://www.freevisitorcounters.com/auth.php?id=a6e947911c99b145025eea021d5ee9441b9220e0'></script>
+                <script type="text/javascript"
+                    src="https://www.freevisitorcounters.com/en/home/counter/1265233/t/6"></script>
+            </div>
 
-    <script src="{{asset('frontend/js/scripts.js')}}"></script>
-    <script src="{{asset('frontend/js/player.js')}}"></script>
-    <script src="{{asset('frontend/js/clappr.min.js')}}"></script>
-    <script src="{{asset('frontend/js/clappr-chromecast-plugin.min.js')}}"></script>
-    <script src="{{asset('frontend/js/dash.all.min.js')}}"></script>
-    <script src="{{asset('frontend/js/Youtube.js')}}"></script>
-    <script src="{{asset('frontend/js/Youtube.min.js')}}"></script>
+            <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
+            <script src="{{asset('frontend/js/hls.js')}}"></script>
+            <script src="{{asset('frontend/js/scripts2aec.js')}}"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@commonninja/node-sdk@1.1.37/dist/src/index.min.js"></script>
-    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer=""></script>
-    <script src="https://cdn.commoninja.com/scripts/sdk/main.js" id="cn-main-script" async=""></script>
+            <script src="{{asset('frontend/js/scripts.js')}}"></script>
+            <script src="{{asset('frontend/js/player.js')}}"></script>
+            <script src="{{asset('frontend/js/clappr.min.js')}}"></script>
+            <script src="{{asset('frontend/js/clappr-chromecast-plugin.min.js')}}"></script>
+            <script src="{{asset('frontend/js/dash.all.min.js')}}"></script>
+            <script src="{{asset('frontend/js/Youtube.js')}}"></script>
+            <script src="{{asset('frontend/js/Youtube.min.js')}}"></script>
 
-    <script>
-        @if ($errors->any())
-            @foreach ($errors->all() as $error)
-                toastr.error("{{$error}}")
-            @endforeach
-        @endif
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('.auto_click').click();
-        })
-    </script>
+            <script src="https://cdn.jsdelivr.net/npm/@commonninja/node-sdk@1.1.37/dist/src/index.min.js"></script>
+            <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer=""></script>
+            <script src="https://cdn.commoninja.com/scripts/sdk/main.js" id="cn-main-script" async=""></script>
+
+            <script>
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        toastr.error("{{$error}}")
+                    @endforeach
+                @endif
+            </script>
+            <script>
+                $(document).ready(function () {
+                    $('.auto_click').click();
+                })
+            </script>
 </body>
 
 </html>
