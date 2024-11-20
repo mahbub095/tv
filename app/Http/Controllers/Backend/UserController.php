@@ -59,11 +59,16 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         
         $user->status = $request->status;
+
+        if ($user->role != 'user') {
+            return response(['status' => 'error', 'message' => 'This users contain, Admin should not be delete first make it as user!']);
+        }
+
         $user->save();
 
         toastr('Updated Successfully!', 'success');
 
-        return redirect()->route('admin.user.index');
+        return redirect()->back();
     }
 
     /**
@@ -76,10 +81,16 @@ class UserController extends Controller
 
     public function changeStatus(Request $request)
     {
-        $category = User::findOrFail($request->id);
-        $category->status = $request->status == 'true' ? 'active' : 'inactive';
-        $category->save();
+        $user = User::findOrFail($request->id);
+        $user->status = $request->status == 'true' ? 'active' : 'inactive';
+
         
-        return response(['message' => 'Category has been updated!']);
+        if ($user->role != 'user') {
+            return response(['status' => 'error', 'message' => 'This users contain, Admin should not be delete first make it as user!']);
+        }
+
+        $user->save();
+        
+        return response(['message' => 'User has been updated!']);
     }
 }
