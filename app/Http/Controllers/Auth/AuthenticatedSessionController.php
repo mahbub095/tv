@@ -37,12 +37,18 @@ class AuthenticatedSessionController extends Controller
             'last_login_ip' => $request->getClientIp()
         ]);
 
+        if($request->user()->status === 'inactive'){
+            Auth::guard('web')->logout();
+            $request->session()->regenerateToken();
+            toastr('account has been banned from website please connect with support!', 'error', 'Account Banned!');
+            return redirect('/');
+        }
+
         if($request->user()->role === 'admin'){
             return redirect()->intended('/admin/dashboard');
         }elseif($request->user()->role === 'user'){
             return redirect()->intended('/');
         }
-
 
         return redirect()->intended(RouteServiceProvider::HOME);
 
