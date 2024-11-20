@@ -32,6 +32,8 @@ Route::resource('category', CategoryController::class);
 Route::put('channel/change-status', [ChannelController::class, 'changeStatus'])->name('channel.change-status');
 Route::resource('channel', ChannelController::class);
 Route::resource('blockip', BlockIpController::class);
+
+Route::put('user/change-status', [UserController::class, 'changeStatus'])->name('user.change-status');
 Route::resource('user', UserController::class);
 
 /** settings routes */

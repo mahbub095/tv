@@ -24,12 +24,34 @@ class UserDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
 
+        ->addColumn('action', function ($query) {
+            $editBtn = "<a href='" . route('admin.user.edit', $query->id) . "' class='btn btn-primary'><i class='far fa-edit'></i></a>";
+         
+            return $editBtn ;
+        })
+
             ->addColumn('logo', function ($query) {
                 return "<img width='100px' src='" . asset($query->logo) . "' ></img>";
             })
 
+            
+            ->addColumn('status', function ($query) {
+                if ($query->status == "active") {
+                    $button = '<label class="custom-switch mt-2">
+                        <input type="checkbox" checked name="custom-switch-checkbox" data-id="' . $query->id . '" class="custom-switch-input change-status" >
+                        <span class="custom-switch-indicator"></span>
+                    </label>';
+                } else {
+                    $button = '<label class="custom-switch mt-2">
+                        <input type="checkbox" name="custom-switch-checkbox" data-id="' . $query->id . '" class="custom-switch-input change-status">
+                        <span class="custom-switch-indicator"></span>
+                    </label>';
+                }
+                return $button;
+            })
 
-            ->rawColumns(['logo', 'action'])
+
+            ->rawColumns(['logo', 'action','status'])
             ->setRowId('id');
     }
 
@@ -74,6 +96,8 @@ class UserDataTable extends DataTable
             Column::make('name')->width(05),
             Column::make('email'),
             Column::make('last_login_ip'),
+            Column::computed('action'),
+            Column::make('status')->width(200),
 
 
         ];
