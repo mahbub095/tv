@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('logo_settings', function (Blueprint $table) {
             $table->id();
             $table->string('site_name');
+            $table->longText('headline')->nullable();
             $table->text('logo');
             $table->text('favicon');
 

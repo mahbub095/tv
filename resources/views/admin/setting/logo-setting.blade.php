@@ -9,6 +9,13 @@
                     <input type="text" class="form-control" name="site_name"
                            value="{{ @$logoSetting->site_name }}">
                 </div>
+
+                <div class="form-group">
+                    <label>Head Line</label>
+                    <input type="text" class="form-control" name="headline"
+                           value="{{ @$logoSetting->headline }}">
+                </div>
+
                 <div class="form-group">
                     <img src="{{ asset(@$logoSetting->logo) }}" width="150px" alt="">
                     <br>

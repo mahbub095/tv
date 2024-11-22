@@ -9,5 +9,5 @@ class LogoSetting extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['site_name','logo', 'favicon'];
+    protected $fillable = ['site_name','headline', 'logo', 'favicon'];
 }

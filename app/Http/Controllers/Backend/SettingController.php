@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\EmailConfiguration;
-use App\Models\GeneralSetting;
 use App\Models\LogoSetting;
 use App\Traits\ImageUploadTrait;
 use Illuminate\Http\Request;
@@ -36,6 +34,7 @@ class SettingController extends Controller
             ['id' => 1],
             [
                 'site_name' => $request->site_name,
+                'headline' => $request->headline,
                 'logo' => (!empty($logoPath)) ? $logoPath : $request->old_logo,
                 'favicon' => (!empty($favicon)) ? $favicon : $request->old_favicon
             ]

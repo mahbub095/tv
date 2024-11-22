@@ -1,8 +1,4 @@
-<marquee style="color: #ffe933; font-size: 24px; font-weight: bold;" scrollamount="15">
-   Online Free TV
-</marquee>
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
 <head>
@@ -40,6 +36,10 @@
 </head>
 
 <body>
+
+<marquee width="60%" direction="right" height="100px" style="color: #ffe933; font-size: 24px; font-weight: bold;" scrollamount="15">
+{{ $logoSetting->headline }}
+</marquee>
 
     <div class="navbar navbar dark:#000">
         <div class="container d-flex justify-content-between"><a href="/"><img src="{{asset($logoSetting->favicon)}}"
