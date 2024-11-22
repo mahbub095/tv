@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -32,19 +32,28 @@
         body {
             background: #000 top center;
         }
+
+        marquee {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+            border: 1px solid rgba(0, 0, 0, .15);
+            background-color: dark:#000;
+            padding: 2px;
+        }
     </style>
+
 </head>
 
 <body>
 
-<marquee width="60%" direction="right" height="100px" style="color: #ffe933; font-size: 24px; font-weight: bold;" scrollamount="15">
-{{ $logoSetting->headline }}
-</marquee>
+    <marquee width="60%" direction="right" height="100px" style="color: #ffe933; font-size: 24px; font-weight: bold;"
+        scrollamount="15">
+        {{ $logoSetting->headline }}
+    </marquee>
 
     <div class="navbar navbar dark:#000">
-        <div class="container d-flex justify-content-between"><a href="/"><img src="{{asset($logoSetting->favicon)}}"
-                    width="60px" height="60px" alt="Test Logo"></a>
-
+        <div class="container d-flex justify-content-between">
+            <a href="/"><img src="{{asset($logoSetting->favicon)}}" width="60px" height="60px" alt="Test Logo"></a>
+        
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
 
