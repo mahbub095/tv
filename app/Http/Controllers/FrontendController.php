@@ -16,20 +16,17 @@ class FrontendController extends Controller
     {
         $this->middleware('auth');
     }
-  
 
     public function index()
     {
-    
+
         $logoSetting = LogoSetting::first();
-        $categories=Category::select('name','id')->get();
-        $channels=Channel::select('logo','name', 'slug','category_id')->latest()->get();
+        $categories = Category::select('name', 'id')->get();
+        $channels = Channel::select('logo', 'name', 'slug', 'category_id')->latest()->get();
         $channelsData = Channel::paginate(10);
 
-        return view('frontend.home', compact('channels','categories','channelsData','logoSetting'));
+        return view('frontend.home', compact('channels', 'categories', 'channelsData', 'logoSetting'));
 
         // return response()->json(['category'=>$categories,'channel'=>$channels]);
-
     }
-
 }

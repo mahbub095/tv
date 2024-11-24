@@ -52,7 +52,7 @@
                                 <h4>Blocked Users</h4>
                             </div>
                             <div class="card-body">
-                              
+
                             </div>
                         </div>
                     </div>

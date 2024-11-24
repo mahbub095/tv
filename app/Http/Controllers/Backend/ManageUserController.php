@@ -25,7 +25,7 @@ class ManageUserController extends Controller
 
         $user = new User();
 
-        if($request->role === 'user'){
+        if ($request->role === 'user') {
             $user->name = $request->name;
             $user->email = $request->email;
             $user->password = bcrypt($request->password);
@@ -37,19 +37,19 @@ class ManageUserController extends Controller
 
             toastr('Created Successfully!', 'success', 'success');
             return redirect()->back();
-        }elseif ($request->role === 'admin'){
+        } elseif ($request->role === 'admin') {
             $user->name = $request->name;
             $user->email = $request->email;
             $user->password = bcrypt($request->password);
             $user->role = 'admin';
             $user->status = 'active';
             $user->save();
-            
+
             // Mail::to($request->email)->send(new AccountCreatedMail($request->name, $request->email, $request->password));
 
             toastr('Created Successfully!', 'success', 'success');
             return redirect()->back();
-        
+
         }
     }
 }

@@ -55,9 +55,9 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-      
+
         $user = User::findOrFail($id);
-        
+
         $user->status = $request->status;
 
         if ($user->role != 'user') {
@@ -84,13 +84,13 @@ class UserController extends Controller
         $user = User::findOrFail($request->id);
         $user->status = $request->status == 'true' ? 'active' : 'inactive';
 
-        
+
         if ($user->role != 'user') {
             return response(['status' => 'error', 'message' => 'This users contain, Admin should not be delete first make it as user!']);
         }
 
         $user->save();
-        
+
         return response(['message' => 'User has been updated!']);
     }
 }
