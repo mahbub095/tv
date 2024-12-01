@@ -10,10 +10,10 @@
         <div class="section-body">
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-6">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Create User</h4>
+                            <h4>Update user's status</h4>
 
                         </div>
                         <div class="card-body">

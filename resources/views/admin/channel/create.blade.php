@@ -13,7 +13,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Create Channel</h4>
+                            <h4>Create new channel</h4>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('admin.channel.store') }}" method="POST"

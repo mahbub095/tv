@@ -12,10 +12,10 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>All Categories</h4>
+                            <h4>All Channels</h4>
                             <div class="card-header-action">
                                 <a href="{{route('admin.channel.create')}} " class="btn btn-primary"><i
-                                        class="fas fa-plus"></i> Create New</a>
+                                        class="fas fa-plus"></i> Create new channel</a>
                             </div>
                         </div>
                         <div class="card-body">
