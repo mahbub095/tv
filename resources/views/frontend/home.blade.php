@@ -8,7 +8,7 @@
 
     <meta charset="utf-8">
 
-    <title> @yield('title')</title>
+    <title> {{$logoSetting->site_name}}</title>
 
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet"/>
 
