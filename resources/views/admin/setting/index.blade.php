@@ -18,14 +18,14 @@
                                 <div class="col-2">
                                     <div class="list-group" id="list-tab" role="tablist">
                                         <a class="list-group-item list-group-item-action" id="list-messages-list"
-                                           data-toggle="list" href="#list-messages" role="tab">Logo and Favicon</a>
+                                           data-toggle="list" href="#list-messages" role="tab">Logo</a>
 
                                     </div>
                                 </div>
                                 <div class="col-10">
                                     <div class="tab-content" id="nav-tabContent">
 
-                                        @include('admin.setting.logo-setting')
+                                        @include('admin.setting.setting')
                                     </div>
                                 </div>
                             </div>

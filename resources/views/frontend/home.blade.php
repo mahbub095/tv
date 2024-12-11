@@ -1,8 +1,8 @@
 <marquee style="color: #ffe933; font-size: 24px; font-weight: bold;" scrollamount="15">
-    {{$logoSetting->headline}}
+    {{$setting->headline}}
 </marquee>
 @php
-    $logoSetting = App\Models\LogoSetting::select('logo', 'favicon')->first();
+    $setting = App\Models\Setting::select('logo')->first();
 
 @endphp
 <!DOCTYPE html>
@@ -12,14 +12,14 @@
 
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
-  
 
-    <title> {{$logoSetting->site_name}}</title>
-    <link rel="shortcut icon" href="{{asset($logoSetting->favicon)}}">
-    <link rel="icon" type="image/png" href="{{asset($logoSetting->favicon)}}">
-    
+
+    <title> {{$setting->site_name}}</title>
+    <link rel="shortcut icon" href="{{asset($setting->favicon)}}">
+    <link rel="icon" type="image/png" href="{{asset($setting->favicon)}}">
+
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
- 
+
 
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet" />
@@ -50,14 +50,9 @@
 
 <body>
 
-    <!-- <marquee width="60%" direction="right" height="100px" style="color: #ffe933; font-size: 24px; font-weight: bold;"
-        scrollamount="15">
-        {{$logoSetting->headline}}
-    </marquee> -->
-
     <div class="navbar navbar dark:#000">
         <div class="container d-flex justify-content-between">
-            <a href="/"><img src="{{asset($logoSetting->logo)}}" width="60px" height="60px" alt="Test Logo"></a>
+            <a href="/"><img src="{{asset($setting->logo)}}" width="60px" height="60px" alt="Test Logo"></a>
 
             <form method="POST" action="{{ route('logout') }}">
                 @csrf

@@ -13,6 +13,11 @@
                         class="fas fa-fire"></i><span>Dashboard</span></a>
 
             </li>
+        {{--    <li class="dropdown active">
+                <a href="{{ route('/') }} " class="nav-link"><i
+                        class="fas fa-fire"></i><span>Frontend</span></a>
+
+            </li>--}}
             <li class="menu-header">TV APP</li>
 
             <li class="dropdown  ">

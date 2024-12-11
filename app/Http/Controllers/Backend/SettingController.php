@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\LogoSetting;
+use App\Models\Setting;
 use App\Traits\ImageUploadTrait;
 use Illuminate\Http\Request;
 
@@ -14,29 +14,25 @@ class SettingController extends Controller
     public function index()
     {
 
-        $logoSetting = LogoSetting::first();
-        return view('admin.setting.index', compact('logoSetting'));
+        $setting = Setting::first();
+        return view('admin.setting.index', compact('setting'));
     }
 
-    public function logoSettingUpdate(Request $request)
+    public function SettingUpdate(Request $request)
     {
         $request->validate([
 
-            'site_name' => ['required', 'max:200'],
-            'logo' => ['image', 'max:3000'],
-            'favicon' => ['image', 'max:3000'],
+            'site_name' => ['required', 'max:200']
         ]);
 
         $logoPath = $this->updateImage($request, 'logo', 'uploads', $request->old_logo);
-        $favicon = $this->updateImage($request, 'favicon', 'uploads', $request->old_favicon);
 
-        LogoSetting::updateOrCreate(
+        Setting::updateOrCreate(
             ['id' => 1],
             [
                 'site_name' => $request->site_name,
                 'headline' => $request->headline,
-                'logo' => (!empty($logoPath)) ? $logoPath : $request->old_logo,
-                'favicon' => (!empty($favicon)) ? $favicon : $request->old_favicon
+                'logo' => (!empty($logoPath)) ? $logoPath : $request->old_logo
             ]
         );
 

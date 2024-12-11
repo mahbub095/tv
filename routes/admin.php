@@ -37,7 +37,7 @@ Route::resource('user', UserController::class);
 
 /** settings routes */
 Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
-Route::put('logo-setting-update', [SettingController::class, 'logoSettingUpdate'])->name('logo-setting-update');
+Route::put('setting-update', [SettingController::class, 'SettingUpdate'])->name('setting-update');
 
 /** manage user routes */
 Route::get('manage-user', [ManageUserController::class, 'index'])->name('manage-user.index');
