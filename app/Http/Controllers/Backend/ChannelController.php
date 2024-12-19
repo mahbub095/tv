@@ -45,6 +45,7 @@ class ChannelController extends Controller
 
         $request->validate([
             'name' => ['required', 'max:200'],
+            'category' => ['required'],
             'status' => ['required']
         ]);
 
@@ -88,6 +89,7 @@ class ChannelController extends Controller
     {
         $request->validate([
             'name' => ['required', 'max:200'],
+            'category' => ['required'],
             'status' => ['required']
         ]);
 
