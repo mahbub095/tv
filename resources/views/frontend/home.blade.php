@@ -94,7 +94,7 @@
 
                     <ul class="nav nav-tabs nav-justified" style=" margin-bottom: 15px;">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#" data-type="Bangla">Random</a>
+                            <a class="nav-link active" href="#" data-type="Bangla">ALL</a>
                         </li>
 
                         @foreach(App\Models\Category::all() as $category)
@@ -108,7 +108,7 @@
 
                     <ul id="vidlink" class="thumbnail-slider d-flex flex-wrap">
 
-                        @foreach(App\Models\Channel::all()->take(8) as $channel)
+                        @foreach(App\Models\Channel::all()->take(20) as $channel)
                             @if ($channel->name && $channel->status != 0)
 
                                 <li class="Bangla">
