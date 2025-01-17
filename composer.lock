@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ede53f4b104df6a7b3f0c9fc0c4325ed",
+    "content-hash": "6a2a95d1a7dde25b2766bfd55000c6d3",
     "packages": [
         {
             "name": "brick/math",
@@ -134,6 +134,67 @@
                 }
             ],
             "time": "2023-12-11T17:09:12+00:00"
+        },
+        {
+            "name": "coderstm/laravel-installer",
+            "version": "v2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coders-tm/laravel-installer.git",
+                "reference": "bef23f7d7784ac9d3e4aac54543ae305bd4a5480"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coders-tm/laravel-installer/zipball/bef23f7d7784ac9d3e4aac54543ae305bd4a5480",
+                "reference": "bef23f7d7784ac9d3e4aac54543ae305bd4a5480",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/console": "^9.21|^10.0",
+                "illuminate/contracts": "^9.21|^10.0",
+                "illuminate/support": "^9.21|^10.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "nunomaduro/collision": "^7.0",
+                "orchestra/testbench": "^7.0|^8.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Coderstm\\LaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/helpers.php"
+                ],
+                "psr-4": {
+                    "Coderstm\\LaravelInstaller\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dipak Sarkar",
+                    "email": "hello@dipaksarkar.in"
+                }
+            ],
+            "description": "Laravel web installer",
+            "support": {
+                "issues": "https://github.com/coders-tm/laravel-installer/issues",
+                "source": "https://github.com/coders-tm/laravel-installer/tree/v2.1"
+            },
+            "time": "2023-12-16T16:10:18+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -9731,5 +9792,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }

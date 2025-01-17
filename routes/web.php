@@ -3,7 +3,6 @@
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\FrontendController;
-use App\Http\Controllers\Installer\InstallerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +15,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/install/check/{param}', [InstallerController::class, 'index'])->name('install.check');
-
+ 
 Route::get('404', function () {
     return abort(404);
 })->name('404');
