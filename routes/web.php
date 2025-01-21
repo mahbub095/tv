@@ -15,13 +15,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
- 
-Route::get('404', function () {
-    return abort(404);
-})->name('404');
+
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 
+Route::get('404', function () {
+    return abort(404);
+})->name('404');
+ 
 require __DIR__ . '/auth.php';
 
 /** Profile Routes */
