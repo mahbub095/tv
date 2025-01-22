@@ -7,7 +7,7 @@ return [
      * Shared translations.
      *
      */
-    'title' => 'Coderstm Installer',
+    'title' => 'Installer',
     'next' => 'Next Step',
     'back' => 'Previous',
     'finish' => 'Install',
@@ -22,8 +22,8 @@ return [
      */
     'welcome' => [
         'templateTitle' => 'Welcome',
-        'title'   => 'Coderstm Installer',
-        'message' => 'Welcome to Coderstm. Before getting started, we need some information on the database. You will need to know the following items before proceeding.',
+        'title'   => 'Installer',
+        'message' => 'Welcome to TV installer. Before getting started, we need some information on the database. You will need to know the following items before proceeding.',
         'next'    => "Let's go",
     ],
 
@@ -141,7 +141,7 @@ return [
      *
      */
     'installed' => [
-        'success_log_message' => 'Coderstm Installer successfully INSTALLED on ',
+        'success_log_message' => 'Installer successfully INSTALLED on ',
     ],
 
     /*
@@ -206,7 +206,7 @@ return [
         ],
 
         'log' => [
-            'success_message' => 'Coderstm Installer successfully UPDATED on ',
+            'success_message' => 'Installer successfully UPDATED on ',
         ],
     ],
 ];

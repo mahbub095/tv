@@ -53,6 +53,9 @@ return [
         'storage/framework/'     => '775',
         'storage/logs/'          => '775',
         'bootstrap/cache/'       => '775',
+        'public/backend/'        => '775',
+        'public/frontend/'       => '775',
+        'resources/views/'       => '775',
     ],
 
     /*

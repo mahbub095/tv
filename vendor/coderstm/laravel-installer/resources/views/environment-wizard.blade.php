@@ -63,20 +63,6 @@
                         @endif
                     </div>
 
-                    <!-- <div class="form-group col-md-6 {{ $errors->has('license_key') ? ' has-error ' : '' }}">
-                        <label for="license_key">
-                            {{ trans('installer::messages.environment.wizard.form.license_key_label') }}
-                        </label>
-                        <input type="text" name="license_key" id="license_key" value="{{ old('license_key') }}"
-                            placeholder="{{ trans('installer::messages.environment.wizard.form.license_key_placeholder') }}" />
-                        @if ($errors->has('license_key'))
-                            <span class="error-block">
-                                <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-                                {{ $errors->first('license_key') }}
-                            </span>
-                        @endif
-                    </div> -->
-
                     <div class="form-group col-md-4 {{ $errors->has('app_env') ? ' has-error ' : '' }}">
                         <label for="environment">
                             {{ trans('installer::messages.environment.wizard.form.app_env_label') }}
@@ -248,62 +234,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="col-12">
-                <h5 class="mb-3">
-                    {{ trans('installer::messages.environment.wizard.form.app_tabs.stripe_label') }}
-                    <a href="https://dashboard.stripe.com/test/apikeys" target="_blank"
-                        title="{{ trans('installer::messages.environment.wizard.form.app_tabs.more_info') }}">
-                        <i class="small fa fa-info-circle fa-fw" aria-hidden="true"></i>
-                        <span class="sr-only">
-                            {{ trans('installer::messages.environment.wizard.form.app_tabs.more_info') }}
-                        </span>
-                    </a>
-                </h5>
-                <div class="row">
-                    <div class="form-group col-md-4 {{ $errors->has('stripe_key') ? ' has-error ' : '' }}">
-                        <label for="stripe_key">
-                            {{ trans('installer::messages.environment.wizard.form.app_tabs.stripe_key_label') }}
-                        </label>
-                        <input type="text" name="stripe_key" id="stripe_key" value="{{ old('stripe_key') }}"
-                            placeholder="{{ trans('installer::messages.environment.wizard.form.app_tabs.stripe_key_palceholder') }}" />
-                        @if ($errors->has('stripe_key'))
-                            <span class="error-block">
-                                <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-                                {{ $errors->first('stripe_key') }}
-                            </span>
-                        @endif
-                    </div>
-                    <div class="form-group col-md-4 {{ $errors->has('stripe_secret') ? ' has-error ' : '' }}">
-                        <label
-                            for="stripe_secret">{{ trans('installer::messages.environment.wizard.form.app_tabs.stripe_secret_label') }}</label>
-                        <input type="text" name="stripe_secret" id="stripe_secret"
-                            value="{{ old('stripe_secret') }}"
-                            placeholder="{{ trans('installer::messages.environment.wizard.form.app_tabs.stripe_secret_palceholder') }}" />
-                        @if ($errors->has('stripe_secret'))
-                            <span class="error-block">
-                                <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-                                {{ $errors->first('stripe_secret') }}
-                            </span>
-                        @endif
-                    </div>
-                    <div class="form-group col-md-4 {{ $errors->has('stripe_webhook_secret') ? ' has-error ' : '' }}">
-                        <label
-                            for="stripe_webhook_secret">{{ trans('installer::messages.environment.wizard.form.app_tabs.stripe_webhook_secret_label') }}</label>
-                        <input type="text" name="stripe_webhook_secret" id="stripe_webhook_secret"
-                            value="{{ old('stripe_webhook_secret') }}"
-                            placeholder="{{ trans('installer::messages.environment.wizard.form.app_tabs.stripe_webhook_secret_palceholder') }}" />
-                        @if ($errors->has('stripe_webhook_secret'))
-                            <span class="error-block">
-                                <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-                                {{ $errors->first('stripe_webhook_secret') }}
-                            </span>
-                        @endif
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="col-12">
                 <h5 class="mb-3">
                     {{ trans('installer::messages.environment.wizard.form.app_tabs.recaptcha_label') }}
                     <a href="https://www.google.com/recaptcha/about/" target="_blank"
@@ -342,7 +272,7 @@
                         @endif
                     </div>
                 </div>
-            </div> -->
+            </div> 
         </div>
 
         <div class="col-12 mt-3 text-center">
