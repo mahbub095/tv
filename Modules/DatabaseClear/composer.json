@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/databaseclear",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\DatabaseClear\\": "",
+            "Modules\\DatabaseClear\\App\\": "app/",
+            "Modules\\DatabaseClear\\Database\\Factories\\": "database/factories/",
+            "Modules\\DatabaseClear\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\DatabaseClear\\Tests\\": "tests/"
+        }
+    }
+}

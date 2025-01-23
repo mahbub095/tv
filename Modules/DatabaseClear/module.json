@@ -1,0 +1,11 @@
+{
+    "name": "DatabaseClear",
+    "alias": "databaseclear",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DatabaseClear\\App\\Providers\\DatabaseClearServiceProvider"
+    ],
+    "files": []
+}
